@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Getting Started" id="Getting-Started">
+
+    <p>To play Modded Minecraft, you will need a few things:</p>
+    <list>
+        <li>A Java installation</li>
+        <li>A Launcher that supports Modded instances</li>
+        <li>A minimum of 8GB of RAM installed in your computer, but it is highly recommended to have at least 16GB</li>
+    </list>
+
+    <p>To get started, you need to install a version of Java. Depending on which version of Minecraft you want to play, the version will be different.</p>
+    <table column-width="fixed" width="400">
+        <tr>
+            <td>Minecraft Version</td>
+            <td>Java Version</td>
+            <td>64 bit OS</td>
+        </tr>
+        <tr>
+            <td>1.7.10 and older</td>
+            <td>Java 6/7</td>
+            <td>Not required</td>
+        </tr>
+        <tr>
+            <td>1.16.5 and older</td>
+            <td>Java 8</td>
+            <td>Not required</td>
+        </tr>
+        <tr>
+            <td>1.17 - 1.17.1</td>
+            <td>Java 16</td>
+            <td>Not required</td>
+        </tr>
+        <tr>
+            <td>1.18 - 1.20.4</td>
+            <td>Java 17</td>
+            <td>Not required</td>
+        </tr>
+        <tr>
+            <td>1.20.5 - 1.21.5</td>
+            <td>Java 21</td>
+            <td>Required</td>
+        </tr>
+    </table>
+
+    <tabs group="os">
+        <tab id="windows" title="Windows" group-key="win">
+            <p>To install Java, it is recommended to download an installer for the version of your choosing here:
+                <a href="https://adoptium.net/temurin/releases/?os=windows">adoptium.net</a>
+            </p>
+            <p>On the site, set the Architecture to x86 if on 32-bit, or x64 if on 64-bit.</p>
+            <p>Then set the Package Type to JRE (Java Runtime Environment). If you're interested in creating Mods, select JDK (Java Development Kit).</p>
+            <p>Then set the version of Java you want to install. Feel free to install multiple versions if you're interested in playing different MC versions.</p>
+            <p>Then download the file labeled ".msi". It is not recommended to download the ".zip" archive if you are a beginner, as it is for manual installation.</p>
+            <p>Finally, locate the file and double-click it in the File Explorer to run the installer, and follow the steps in the window.</p>
+        </tab>
+        <tab id="linux" title="Linux" group-key="linux">Instructions for Linux</tab>
+        <tab id="macos" title="macOS" group-key="mac">Instructions for macOS</tab>
+    </tabs>
+</topic>
