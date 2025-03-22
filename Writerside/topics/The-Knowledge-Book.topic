@@ -6,5 +6,10 @@
        title="The Knowledge Book" id="The-Knowledge-Book">
     <section-starting-page><title>The Knowledge Book</title>
         <description>This site was made to provide quick and easy information related to Modded Minecraft</description>
+
+        <spotlight>
+            <card href="Getting-Started.topic" badge="install" summary="How to get started with Modded Minecraft"/>
+            <card href="Troubleshooting.topic" badge="check-list" summary="Guides for troubleshooting"/>
+        </spotlight>
     </section-starting-page>
 </topic>
