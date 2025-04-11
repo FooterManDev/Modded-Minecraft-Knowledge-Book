@@ -93,7 +93,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy cf-pages --project-name=community-server-docs --branch=main
+          command: pages deploy cf-pages --project-name=mmkb --branch=master
           wranglerVersion: 3.101.0
 
   deploy-github-pages:
