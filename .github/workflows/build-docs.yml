@@ -7,9 +7,9 @@ on:
 
 env:
   INSTANCE: 'Writerside/1'
-  ARTIFACT: webHelpMMKB-all.zip
+  ARTIFACT: webHelp1-all.zip
   DOCKER_VERSION: '2025.04.8412'
-  ALGOLIA_ARTIFACT: algolia-indexes-MMKB.zip
+  ALGOLIA_ARTIFACT: algolia-indexes-1.zip
 
 permissions:
   contents: read
