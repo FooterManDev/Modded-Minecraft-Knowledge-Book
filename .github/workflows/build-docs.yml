@@ -95,6 +95,7 @@ jobs:
         uses: actions/deploy-pages@v4
 
   deploy-cloudflare-pages:
+    needs: [ build, test, deploy-github-pages ]
     runs-on: ubuntu-latest
     name: Deploy to Cloudflare Pages
     steps:
