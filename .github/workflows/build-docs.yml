@@ -7,7 +7,7 @@ on:
 
 env:
   INSTANCE: 'Modded Minecraft Knowledge Book/1'
-  DOCKER_VERSION: '27.3'
+  DOCKER_VERSION: '225.48412'
 
 jobs:
   build:
