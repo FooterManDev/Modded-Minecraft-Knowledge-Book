@@ -9,6 +9,10 @@ env:
   INSTANCE: 'Writerside/1'
   DOCKER_VERSION: '2025.04.8412'
 
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
