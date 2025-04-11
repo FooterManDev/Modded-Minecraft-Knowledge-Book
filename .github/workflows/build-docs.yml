@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  INSTANCE: 'Modded Minecraft Knowledge Book/1'
+  INSTANCE: 'Writerside/1'
   DOCKER_VERSION: '2025.04.8412'
 
 jobs:
