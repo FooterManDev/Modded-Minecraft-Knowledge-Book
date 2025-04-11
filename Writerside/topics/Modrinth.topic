@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Modrinth" id="Modrinth">
+
+    <img src="modrinth.svg" alt="Modrinth" width="144" height="144"/>
+
+    <a href="https://modrinth.com">Modrinth</a> is a platform for distributing Modded Minecraft content.
+
+    <chapter title="The Website" id="website">
+        On Modrinth's website, you can discover Mods, ModPacks, Shaders, Data Packs, Resource Packs and Server Plugins.
+        Their search tool is great for finding what you need.
+    </chapter>
+
+    <chapter title="The Modded Launcher" id="launcher">
+        Modrinth has a <a href="https://modrinth.com/app">Modded MC Launcher</a>,
+        which is a good choice for playing Modded Minecraft if you are only interested in using Mods / ModPacks from the Modrinth platform,
+        due to its lack of support for <a href="CurseForge.topic"/> content.<br/>
+        If you want to use Mods / ModPacks from either platform, there are other Launchers that support both platforms.
+        See the <a href="Getting-Started.topic#launcher">Getting Started</a> section.
+    </chapter>
+
+    <chapter title="Modrinth Servers" id="servers">
+        Modrinth supports Modded MC <a href="https://modrinth.com/servers">Server hosting</a> on their website.
+    </chapter>
+
+    <chapter title="Interesting info" id="cool-info">
+        The most downloaded mod on Modrinth is <a href="https://modrinth.com/mod/fabric-api">Fabric API</a>.
+        This Mod is used by almost all Fabric mods, and thus is always downloaded alongside them, hence the high download count.
+        <p/>
+        The most downloaded ModPack on Modrinth is <a href="https://modrinth.com/modpack/fabulously-optimized">Fabulously Optimized</a>.
+        <p/>
+        As of writing, Modrinth hosts 30k+ Minecraft Mods.
+        <p/>
+        Modrinth supports Mods that use <a href="Mod-Loaders.topic#liteloader"/>,
+        <a href="Mod-Loaders.topic#risugamis"/>, and <a href="Mod-Loaders.topic#rift"/>.
+    </chapter>
+
+    <seealso style="cards">
+        <category ref="related">
+            <a href="CurseForge.topic"/>
+        </category>
+        <category ref="external">
+            <a href="https://modrinth.com" summary="Modrinth website">modrinth.com</a>
+        </category>
+    </seealso>
+</topic>

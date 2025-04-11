@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="What is a ModPack?" id="What-is-a-ModPack">
+
+    <!-- TODO: This guide needs to be rewritten with better info about packaged ModPacks. For the moment it's fine. -->
+
+    <note>
+        This topic needs more information.
+    </note>
+
+    A ModPack is a collection of Mods that are configured in specific ways to create a unique Modded MC experience.
+
+    <chapter title="Getting a ModPack" id="getting-a-modpack">
+        ModPacks are generally available for download on <a href="Modrinth.topic"/> and <a href="CurseForge.topic"/>.
+        You can download them from your <a href="What-is-a-Launcher.topic">Launcher</a> directly, or you can download
+        them from the above websites and <a href="#importing">import</a> them into your Launcher.
+
+        <chapter title="Importing" id="importing">
+            ModPacks can be packaged into a couple of different formats, specifically <shortcut>zip</shortcut>, <shortcut>mrpack</shortcut>,
+            or others in rare cases.
+            <p/>
+            Generally, most <a href="What-is-a-Launcher.topic">Launchers</a> support the <shortcut>zip</shortcut> format,
+            but some are formatted differently than others depending on how it was packaged. For example,
+            any <shortcut>zip</shortcut> ModPack made by the <a href="CurseForge.topic#launcher">Curse Launcher</a>
+            is different from a <shortcut>zip</shortcut> ModPack made by the <a href="https://www.technicpack.net/">Technic Launcher</a>.
+            <p/>
+            <shortcut>mrpack</shortcut> is a custom format used for <a href="Modrinth.topic"/> ModPacks only.
+            <p/>
+            Now, you can import ModPacks from these files into your Launcher of choice.
+            Some support dropping files into the window, some require you to manually select the file in their window.
+
+            <!-- TODO: Probably needs to be moved to a different topic. -->
+        </chapter>
+    </chapter>
+</topic>

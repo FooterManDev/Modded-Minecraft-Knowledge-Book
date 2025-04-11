@@ -7,7 +7,23 @@
                  start-page="The-Knowledge-Book.topic">
 
     <toc-element topic="The-Knowledge-Book.topic"/>
-    <toc-element toc-title="Getting Started">
-        <toc-element topic="Getting-Started.topic"/>
+    <toc-element topic="Getting-Started.topic"/>
+    <toc-element topic="What-is-a-Launcher.topic"/>
+    <toc-element topic="What-is-a-Mod.topic"/>
+    <toc-element topic="What-is-a-ModPack.topic"/>
+    <toc-element topic="What-Are-Shaders.topic"/>
+    <toc-element topic="What-is-LWJGL.topic"/>
+    <toc-element topic="Energy.topic"/>
+    <toc-element topic="Performance-Mods.topic"/>
+    <toc-element topic="Optifine.topic"/>
+    <toc-element topic="Mod-Loaders.topic"/>
+    <toc-element topic="Modrinth.topic"/>
+    <toc-element topic="CurseForge.topic"/>
+    <toc-element toc-title="Troubleshooting">
+        <toc-element topic="Logs.topic"/>
+    </toc-element>
+    <toc-element toc-title="Controversies">
+        <toc-element topic="Everything-MultiMC.topic"/>
+        <toc-element topic="The-Forge-Fork.topic"/>
     </toc-element>
 </instance-profile>

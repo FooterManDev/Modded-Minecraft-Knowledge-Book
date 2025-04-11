@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Mod Loaders" id="Mod-Loaders">
+
+    Mod Loaders are used to inject modifications into the game.<br/>
+    In simple terms, they handle loading Mods, and provide tools for create such Mods.
+
+    <chapter title="Available Loaders and their stories" id="available-loaders">
+        <chapter title="Neo Forge" id="neoforge">
+            NeoForge is a fork of <a href="#lexforge">LexForge</a>, created from <a href="The-Forge-Fork.topic"/>.<br/>
+            NeoForge improves on the complexity and rough parts of Forge, along with other improvements,
+            such as using Fabric's Mixin, among other things.
+            We recommend checking out their blog for more details: <a href="https://neoforged.net/categories/news/">neoforged.net</a>
+            <br/>
+            <p/>
+            NeoForge is available for the latest versions of Minecraft, down to 1.20.1, and has Snapshot builds.
+        </chapter>
+
+        <chapter title="Fabric" id="fabric">
+            Fabric was born from <a href="#lexforge">Forge</a> during development of the Mod Loader for Minecraft 1.13, due to slow progress,
+            Forge's bloat, and Lex Manos being a jerk.<br/>
+            Fabric is designed to be quick to update,
+            so downtime between availability when a new version of Minecraft is released is minimal.<br/>
+            <p/>
+            Fabric is available for the latest versions of Minecraft, down to 1.14.
+        </chapter>
+
+        <chapter title="Quilt" id="quilt">
+            Quilt was born from <a href="#fabric">Fabric</a>, developed by a very vocal trans activist group, due to the group making demands
+            to Fabric moderation, eventually being unable to get what they wanted.<br/>
+            Quilt is not very interesting and unique, which is why it has a quite small userbase.<br/>
+            It also supports Fabric mods, basically making the loader redundant.
+            <p/>
+            Quilt is available for the latest versions of Minecraft, down to 1.14.4, and has Snapshot builds.
+        </chapter>
+
+        <chapter title="Rift" id="rift">
+            Rift was born from <a href="#lexforge">LexForge</a> during development of the Mod Loader for Minecraft 1.13, due to slow progress,
+            Forge's bloat, and Lex Manos being a jerk.<br/>
+            Rift was designed similarly to <a href="#fabric">Fabric</a>, it was decently lightweight by not providing tools Modders could develop themselves.
+            <br/>
+            Rift was not available for long, partly due to it being criticized by using MCP Mappings where they shouldn't have.<br/>
+            <p/>
+            Rift is available for Minecraft 1.13 to 1.13.2.
+        </chapter>
+
+        <chapter title="LiteLoader" id="liteloader">
+            LiteLoader is a client-side Mod Loader, and as the name suggests, is lightweight.<br/>
+            Mods developed on LiteLoader cannot have features such as custom Items, Blocks, etc.
+            due to its lack of server-side support.<br/>
+            For that, LiteLoader can be used with <a href="#lexforge">LexForge</a> mods.
+            <p/>
+            LiteLoader is available for Minecraft 1.12.2, down to 1.5.2.
+        </chapter>
+
+        <chapter title="Risugami's Mod Loader" id="risugamis">
+            Risugami's Mod Loader was developed during Minecraft's beta phase, up to 1.6.2.<br/>
+            This was the first unofficial Mod Loader, before <a href="#lexforge">LexForge</a>.<br/>
+            That's really the only notable thing about this Mod Loader.
+            Any other information for this would be nice to have.
+        </chapter>
+
+        <chapter title="Forge, aka LexForge" id="lexforge">
+            LexForge was for a long time, the main option for a Minecraft Mod Loader, founded by Lex Manos,
+            and supports versions from 1.1 to 1.21.<br/>
+            The reason it's called LexForge is due to the Forge Fork.<br/>
+            More info here: <a href="The-Forge-Fork.topic"/><br/>
+            Forge is available for the latest versions of Minecraft, all the way down to 1.1.
+        </chapter>
+    </chapter>
+</topic>

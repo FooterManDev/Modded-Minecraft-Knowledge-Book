@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Performance Mods" id="Performance-Mods">
+    <note>
+        Each Mod needs more info.
+    </note>
+    <note>
+        Surely there are more mods to put here?
+    </note>
+
+    If you're looking for ways to improve Minecraft's performance, here's a list of good mods to use:
+
+    <chapter title="Embeddium" id="Embeddium">
+        <a href="https://modrinth.com/mod/embeddium">
+            <img
+                    src="https://cdn.modrinth.com/data/sk9rgfiA/55f9c50284f8abbbe2a485abfd6a16209201e451_96.webp"
+                    alt="embeddium"
+                    height="50"
+                    border-effect="rounded"
+                    style="inline"
+            />
+            Embeddium
+        </a>
+        is a fork of <a href="#sodium"/> for
+        <a href="Mod-Loaders.topic#neoforge"/> and <a href="Mod-Loaders.topic#lexforge">LexForge</a>.
+    </chapter>
+    <chapter title="Sodium" id="sodium">
+        <a href="https://modrinth.com/mod/sodium">
+            <img
+                    src="https://cdn.modrinth.com/data/AANobbMI/295862f4724dc3f78df3447ad6072b2dcd3ef0c9_96.webp"
+                    alt="sodium"
+                    height="50"
+                    border-effect="rounded"
+                    style="inline"
+            />
+            Sodium
+        </a>
+        is capable of improving performance significantly. It also fixes several other graphical issues and provides
+        some useful features.<br/>
+    </chapter>
+</topic>

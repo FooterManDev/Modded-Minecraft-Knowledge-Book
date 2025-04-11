@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="CurseForge" id="CurseForge">
+    <img src="curseforge.svg" alt="CurseForge" width="144" height="144"/>
+
+    <a href="https://curseforge.com">CurseForge</a> is a platform for distributing Modded content for a number of different games, most notably Minecraft.
+
+    <chapter title="The Website" id="website">
+        On CurseForge's website, you can discover Mods, ModPacks, Shaders, Data Packs, Resource Packs,
+        Bukkit Plugins, Worlds, and even Bedrock Addons. Their search tool is great for finding what you need.
+    </chapter>
+
+    <chapter title="The Modded Launcher" id="launcher">
+        CurseForge has a <a href="https://www.curseforge.com/download/app">Launcher</a> that supports Minecraft and other games.
+        <br/>
+        However, we don't recommend using this Launcher due to its dependence on Overwolf, which is known to be spyware.<br/>
+        You can download the Launcher on its own without Overwolf if you choose, however,
+        due to CurseForge's relation with Overwolf, we don't trust the standalone version.
+    </chapter>
+
+    <chapter title="Interesting info" id="cool-info">
+        The most downloaded Mod on CurseForge is <a href="https://www.curseforge.com/minecraft/mc-mods/jei">Just Enough Items (JEI)</a>.
+        <p/>
+        The most downloaded ModPack on CurseForge is <a href="https://www.curseforge.com/minecraft/modpacks/rlcraft">RLCraft</a>.
+        <p/>
+        As of writing, CurseForge hosts 200k+ Minecraft Mods, with over 75 Billion downloads.
+    </chapter>
+
+    <seealso style="cards">
+        <category ref="related">
+            <a href="Modrinth.topic"/>
+        </category>
+        <category ref="external">
+            <a href="https://curseforge.com" summary="CurseForge website">curseforge.com</a>
+        </category>
+    </seealso>
+</topic>

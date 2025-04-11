@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="What is a Mod?" id="What-is-a-Mod">
+
+    <!-- TODO: This topic needs more content. -->
+    <note>
+        This topic needs more information.
+    </note>
+
+    "Mod" is short for Modification. Mods interface with the game to create custom content, improve performance, and more.<br/>
+    <p/>
+    For Mods to work, they require a <a href="Mod-Loaders.topic">Mod Loader</a> to load their code into the game.<br/>
+</topic>

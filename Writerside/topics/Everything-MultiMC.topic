@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Everything MultiMC" id="Everything-MultiMC">
+
+    <a href="https://multimc.org/">MultiMC</a> is a modded Minecraft Launcher, born from the Modded Minecraft community
+    to make handling multiple Modded instances easier than the official Minecraft Launcher.<br/>
+    It was, and still is, a generally stable Launcher, and is being actively maintained.
+    <p/>
+    Eventually it was forked into <a href="https://polymc.org/about/">PolyMC</a>,
+    due to some disagreements with MultiMC's maintainer about the project's direction.
+
+    <p/>
+    From then on, PolyMC continued on, and added some of their own features on top of MultiMC.<br/>
+    However, PolyMC eventually had some of their own internal controversy.
+    <p/>
+    The lead maintainer of PolyMC, known as Lenny, banned PolyMC's contributors from the GitHub repository,
+    and removed the PolyMC Code of Conduct. The reason for this "hostile takeover" was due to some political disagreements
+    and controversial statements.
+    <p/>
+    This led to yet another fork, known as <a href="https://prismlauncher.org/">Prism Launcher</a>.
+    It's generally known as another continuation of MultiMC.
+    <p/>
+    All three of these projects are still actively maintained, so feel free to use any of them,
+    but with these issues and disagreements, we recommend using Prism above Poly or Multi.
+</topic>

@@ -4,12 +4,28 @@
 <topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="The Knowledge Book" id="The-Knowledge-Book">
-    <section-starting-page><title>The Knowledge Book</title>
-        <description>This site was made to provide quick and easy information related to Modded Minecraft</description>
 
-        <spotlight>
-            <card href="Getting-Started.topic" badge="install" summary="How to get started with Modded Minecraft"/>
-            <card href="Troubleshooting.topic" badge="check-list" summary="Guides for troubleshooting"/>
-        </spotlight>
-    </section-starting-page>
+    This site was made to provide quick and easy information related to Modded Minecraft.
+    <p/>
+
+    How to play Modded Minecraft: <a href="Getting-Started.topic"/>
+    <p/>
+    What is a Launcher: <a href="What-is-a-Launcher.topic"/>
+    <p/>
+    What is a ModPack: <a href="What-is-a-ModPack.topic"/>
+    <p/>
+    What is a Mod: <a href="What-is-a-Mod.topic"/>
+    <p/>
+    What are Shaders: <a href="What-Are-Shaders.topic"/>
+    <p/>
+    What is OptiFine: <a href="Optifine.topic"/>
+    <p/>
+    Mod Loaders: <a href="Mod-Loaders.topic"/>
+    <p/>
+    Performance Mods: <a href="Performance-Mods.topic"/>
+    <p/>
+    Energy: <a href="Energy.topic"/>
+    <p/>
+    Other topics are available on the left-hand sidebar.
+
 </topic>

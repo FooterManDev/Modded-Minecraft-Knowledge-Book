@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="What is a Launcher?" id="What-is-a-Launcher">
+
+    <!-- TODO: Add Launcher specific documentation. -->
+    <note>
+        This topic needs more information.
+    </note>
+
+    Launchers facilitate the process of managing Modded MC <a href="#instance">Instances</a>,
+    as well as installing and updating everything needed to run them. See:
+
+    <list>
+        <li><a href="What-is-a-Mod.topic"/></li>
+        <li><a href="What-is-a-ModPack.topic"/></li>
+        <li><a href="What-is-LWJGL.topic"/></li>
+    </list>
+    <p/>
+    The most notable Launchers are:
+    <list>
+        <li><a href="https://prismlauncher.org/">Prism Launcher</a></li>
+        <li><a href="https://atlauncher.com/">ATLauncher</a></li>
+        <li><a href="https://modrinth.com/app">Modrinth Launcher</a></li>
+    </list>
+
+    <chapter title="What is an Instance?" id="instance">
+        Instances are what store your Configurations, Worlds and more for a collection of Mods, sometimes known as a
+        <a href="What-is-a-ModPack.topic">ModPack</a>.
+        They are "Instances" of Minecraft, as they include separate installations of the game.
+    </chapter>
+</topic>

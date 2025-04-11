@@ -5,123 +5,25 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="Getting Started" id="Getting-Started">
 
-    <p>To play Modded Minecraft, you will need a few things:</p>
+    <card-summary>
+        How do get started playing Modded Minecraft
+    </card-summary>
+
+    <chapter title="Prerequisites" id="prerequisites">
+    To play Modded Minecraft, you will need a few things:
     <list>
-        <li>A Java installation</li>
         <li>A Launcher that supports Modded instances</li>
+        <li>A Java installation</li>
         <li>A minimum of 8GB of RAM installed on your computer, but it is highly recommended to have at least 16GB</li>
         <li>A Microsoft Account that owns Minecraft</li>
     </list>
+    </chapter>
 
-    <p>To get started, you need to install a version of Java. Depending on which version of Minecraft you want to play, the version will be different.</p>
-    <table column-width="fixed" width="400">
-        <tr>
-            <td>Minecraft Version</td>
-            <td>Java Version</td>
-            <td>64 bit OS</td>
-        </tr>
-        <tr>
-            <td>1.7.10 and older</td>
-            <td>Java 6/7</td>
-            <td>Not required</td>
-        </tr>
-        <tr>
-            <td>1.16.5 and older</td>
-            <td>Java 8</td>
-            <td>Not required</td>
-        </tr>
-        <tr>
-            <td>1.17 - 1.17.1</td>
-            <td>Java 16</td>
-            <td>Not required</td>
-        </tr>
-        <tr>
-            <td>1.18 - 1.20.4</td>
-            <td>Java 17</td>
-            <td>Not required</td>
-        </tr>
-        <tr>
-            <td>1.20.5 - 1.21.5</td>
-            <td>Java 21</td>
-            <td>Required</td>
-        </tr>
-    </table>
-
-    <tabs group="os">
-        <tab id="windows" title="Windows" group-key="win">
-            <p>To install Java, it is recommended to download an installer for the version of your choosing here:
-                <a href="https://adoptium.net/temurin/releases/?os=windows">adoptium.net</a>
-            </p>
-            <p>On the site, set the Architecture to x86 if on 32-bit, or x64 if on 64-bit.</p>
-            <p>Then set the Package Type to JRE (Java Runtime Environment). If you're interested in creating Mods, select JDK (Java Development Kit).</p>
-            <p>Then set the version of Java you want to install. Feel free to install multiple versions if you're interested in playing different MC versions.</p>
-            <p>Then download the file labeled '.msi'. It is not recommended to download the ".zip" archive if you are a beginner, as it is for manual installation.</p>
-            <p>Finally, locate the file and double-click it in the File Explorer to run the installer, then follow the steps in the window.</p>
-        </tab>
-        <tab id="linux" title="Linux" group-key="linux">
-            <p>Follow these instructions to install Java on your Linux distribution using the package manager:</p>
-            <format style="bold">Ubuntu / Debian:</format><br/><code>sudo apt install openjdk-$version-jre</code> (Replace $version with the version you want)
-            <format style="italic">Java 8 is specifically formatted as "8"</format>
-            <p></p>
-            <format style="bold">Fedora:</format><br/><code>sudo dnf install java-$version-openjdk</code> (Replace $version with the version you want)
-            <format style="italic">Java 8 is specifically formatted as "1.8.0"</format>
-            <p></p>
-            <format style="bold">CentOS / RHEL:</format><br/><code>sudo yum install java-$version-openjdk</code> (Replace $version with the version you want>
-            <format style="italic">Java 8 is specifically formatted as "1.8.0"</format>
-            <p></p>
-            <format style="bold">Arch Linux:</format><br/><code>sudo pacman -S jre$version-openjdk</code> (Replace $version with the version you want)
-            <format style="italic">Java 8 is specifically formatted as "8"</format>
-            <p></p>
-            <format style="bold">openSUSE</format><br/><code>sudo zypper install java-$version-openjdk</code> (Replace $version with the version you want)
-            <format style="italic">Java 8 is specifically formatted as "1_8_0"</format>
-            <p></p>
-            If your distribution / package manager is not listed here, refer to their documentation.
-        </tab>
-        <tab id="macos" title="macOS" group-key="mac">
-            <p>To install Java, you can use Homebrew or download a pkg:</p>
-
-            <format style="bold">Homebrew:</format><br/>
-            First you need to add a repository: <code>brew tap homebrew/cask-versions</code><br/>
-            <p></p>
-            Then install Java: <code>brew install --cask temurin@$version</code> (Replace $version with the version you want)
-            <p></p>
-            Example: <code>brew install --cask temurin@8</code>
-            <p></p>
-            <p></p>
-            <format style="bold">Download pkg:</format><br/>
-            Visit <a href="https://adoptium.net/temurin/releases/?os=mac">adoptium.net</a>
-            <p></p>
-            On the site, set the Architecture to <format style="bold">x64 if using INTEL MAC</format>,
-            or <format style="bold">aarch64 if using APPLE SILICON
-            (M1, M2, etc.)</format>
-            <p></p>
-            Then set the Package Type to JRE (Java Runtime Environment).
-            If you're interested in creating Mods, select JDK (Java Development Kit).
-            <p></p>
-            Then set the version of Java you want to install.
-            Feel free to install multiple versions if you're interested in playing different MC versions.
-            <p></p>
-            Then download the file labeled '.pkg'.
-            It is not recommended to download the ".tar.gz" archive if you are a beginner,
-            as it is for manual installation.
-            <p></p>
-            Finally, locate the file and double-click it in Finder to run the installer,
-            then follow the steps in the window.
-        </tab>
-    </tabs>
-
-    <p>---</p>
-    <p/>
-    <p>
-        Now that you have Java installed, you need a Launcher. <br/>
-        It is <format style="italic">not recommended</format> to use the official Minecraft Launcher,
-        due to it being complicated to set up for Modded Instances. <br/>
-        Instead, there are custom Launchers developed by the community that make it easy to set up a Modded Instance.
-        Here's a good selection to choose from:
-    </p>
+    <chapter title="Launcher" id="launcher">
+    To get started, you need to install a Minecraft Launcher that supports Modded Instances.
     <list type="bullet">
         <li><a href="https://prismlauncher.org/">Prism Launcher</a> - An excellent open-source option which supports Modded or Vanilla.</li>
-        <li><a href="https://atlauncher.com/">ATLauncher</a> - Another good open-source option which supports Modded or Vanilla.</li>
+        <li><a href="https://atlauncher.com/">ATLauncher</a> - Another great open-source option which supports Modded or Vanilla.</li>
         <li><a href="https://modrinth.com/app">Modrinth Launcher</a> - If you are only interested in using Mods / Modpacks from the Modrinth platform, this is a good choice.</li>
     </list>
     <p>Some options that are NOT recommended:</p>
@@ -139,23 +41,326 @@
         <li><a href="https://www.feed-the-beast.com/ftb-app">Feed The Beast Launcher</a>
             - Closed source, and requires installing Overwolf on your computer, which is known to be spyware.
             The UI is also clunky and slow, and does not support the Modrinth platform for downloading Mods / Modpacks.
-            FTB Modpacks can be downloaded from PrismLauncher and ATLauncher, making this Launcher practically redundant.
+            FTB Modpacks can be downloaded in ATLauncher,
+            and some are available on CurseForge, and can be imported into PrismLauncher,
+            making this Launcher practically redundant.
         </li>
-        <li>Any Launcher that markets itself as 'Free Minecraft', or does not require a Microsoft Account, is known as 'Cracked'.
-            These Launchers, which may or may not support Modded MC,
-            intentionally put Mods / Modpacks / Minecraft installations on their servers
-            and infect them with Malware, then send them back to you.
-            The most popular example is TLauncher, closed-source and secretly injects Malware into your computer. <br/>
-            <format style="bold">
-                CRACKED LAUNCHERS BYPASS MICROSOFT AND VIOLATE SEVERAL TERMS OF SERVICES
-                AND INFECT YOUR COMPUTER WITH MALWARE.
-                FOR YOUR SAFETY AND SECURITY, DO NOT USE A CRACKED LAUNCHER.
-            </format>
+        <li>
+            Any Launcher that markets itself as 'Free Minecraft', or does not require a Microsoft Account, is known as 'Cracked'.
+            These Launchers, which may or may not support Modded MC, can infect your computer with malware, and cannot be used
+            on Servers.
         </li>
     </list>
 
-    <p>---</p>
-    <p/>
-    After installing a Launcher,
-    proceed to the next guide for setting up a Modded Minecraft instance on your Launcher of choice.
+
+    </chapter>
+    <chapter title="Java" id="java">
+        You need to install a version of Java that is compatible with whichever version of Minecraft you intend to play.
+    <table column-width="fixed" width="400">
+        <tr>
+            <td>Minecraft Version</td>
+            <td>Java Version</td>
+        </tr>
+        <tr>
+            <td>1.16.5 and older</td>
+            <td>Java 8</td>
+        </tr>
+        <tr>
+            <td>1.17 - 1.17.1</td>
+            <td>Java 16-17</td>
+        </tr>
+        <tr>
+            <td>1.18 - 1.20.4</td>
+            <td>Java 17</td>
+        </tr>
+        <tr>
+            <td>1.20.5 - 1.21.5</td>
+            <td>Java 21</td>
+        </tr>
+    </table>
+
+    <tabs group="os">
+        <tab id="windows" title="Windows" group-key="win">
+            <note>
+                This guide is for 64-bit CPUs.
+                If you use something like Arm, you will need to
+                look up how to install Java for your architecture.
+            </note>
+            <note>
+                Before continuing, if you have installed a Launcher that supports downloading Java, use their methods.
+            </note>
+            <p/>
+            To install Java, it is recommended to download an installer for the version of your choosing here:
+            <a href="https://adoptium.net/temurin/releases/?os=windows&amp;arch=x64&amp;package=jre">adoptium.net</a><br/>
+
+            <list type="decimal">
+                <li>Set the version of Java you want to install.</li>
+                <li>Download the <shortcut>.msi</shortcut>. It is not recommended to download the <shortcut>.zip</shortcut> archive if you are a beginner, as it is for manual installation.</li>
+                <li>
+                    Locate the file and double-click it in the File Explorer to run the installer,
+                    then follow the steps in the window.<br/>
+                    If you are asked to set the version you downloaded as the default across all applications, do not,
+                    as it could break other applications.
+                    For example, if you downloaded Java 17 and you set it as default, it could break anything
+                    using Java 8.
+                </li>
+            </list>
+        </tab>
+        <tab id="linux" title="Linux" group-key="linux">
+            <note>
+                This guide is for 64-bit CPUs.
+                If you use something like Arm, you will need to
+                look up how to install Java for your architecture.
+            </note>
+            <note>
+                Before continuing, if you have installed a Launcher that supports downloading Java, use their methods.
+            </note>
+            Follow these instructions to install Java on your Linux distribution using the package manager:
+            <format style="bold">Ubuntu / Debian:</format><br/><shortcut>sudo apt install openjdk-$version-jre</shortcut> (Replace $version with the version you want)
+            <format style="italic">Java 8 is specifically formatted as "8"</format>
+            <p/>
+            <format style="bold">Fedora:</format><br/><shortcut>sudo dnf install java-$version-openjdk</shortcut> (Replace $version with the version you want)
+            <format style="italic">Java 8 is specifically formatted as "1.8.0"</format>
+            <p/>
+            <format style="bold">CentOS / RHEL:</format><br/><shortcut>sudo yum install java-$version-openjdk</shortcut> (Replace $version with the version you want)
+            <format style="italic">Java 8 is specifically formatted as "1.8.0"</format>
+            <p/>
+            <format style="bold">Arch Linux:</format><br/><shortcut>sudo pacman -S jre$version-openjdk</shortcut> (Replace $version with the version you want)
+            <format style="italic">Java 8 is specifically formatted as "8"</format>
+            <p/>
+            <format style="bold">openSUSE</format><br/><shortcut>sudo zypper install java-$version-openjdk</shortcut> (Replace $version with the version you want)
+            <format style="italic">Java 8 is specifically formatted as "1_8_0"</format>
+            <p/>
+            If your distribution / package manager is not listed here, refer to their documentation.
+        </tab>
+        <tab id="macos" title="macOS" group-key="mac">
+            <note>
+                Before continuing, if you have installed a Launcher that supports downloading Java, use their methods.
+            </note>
+
+            To install Java, you can use Homebrew or download a pkg:
+            <p/>
+            <br/>
+
+            <format style="bold">Homebrew:</format>
+            <list type="decimal">
+                <li>First you need to add this repository: <shortcut>brew tap homebrew/cask-versions</shortcut></li>
+                <li>
+                    Then install Java: <shortcut>brew install --cask temurin@$version</shortcut>
+                    <br/>
+                    Replace <shortcut>$version</shortcut> with the version you want
+                    <br/>
+                    Example: <shortcut>brew install --cask temurin@8</shortcut>
+                </li>
+            </list>
+
+            <format style="bold">Download pkg:</format>
+            <list type="decimal">
+                <li>Visit <a href="https://adoptium.net/temurin/releases/?os=mac&amp;arch=any&amp;package=jre">adoptium.net</a></li>
+
+                <li>Set the version of Java you want to install.</li>
+
+                <li>
+                    Depending on your Mac's CPU Architecture, select the <shortcut>.pkg</shortcut> to download.<br/>
+                    If you have an Intel CPU, select the <shortcut>x64</shortcut> file.<br/>
+                    If you have an Apple Silicon CPU (M1, M2, etc.), select the <shortcut>aarch64</shortcut> file.
+                </li>
+
+                <li>
+                Locate the file and double-click it in Finder to run the installer,
+                then follow the steps in the window.
+                </li>
+            </list>
+        </tab>
+
+        <tab title="PrismLauncher" id="prismlauncher">
+            <list type="decimal">
+                <li>Open PrismLauncher's Settings using a button using the bar near the top of the window</li>
+                <li>Select Java from the sidebar</li>
+                <li>On the right, select Management</li>
+                <li>Click Download</li>
+                <li>A window will open where you can select whichever version of Java you want and download it.</li>
+            </list>
+        </tab>
+
+        <tab title="Modrinth App" id="modrinth">
+            <list type="decimal">
+                <li>Open the Settings menu using the Cogwheel / Gear button in the bottom left</li>
+                <li>Select Java Installations</li>
+                <li>On Java 21, 17 or 8 locations, select Install Recommended.</li>
+            </list>
+        </tab>
+    </tabs>
+    </chapter>
+
+    <chapter title="Time to Launch" id="time-to-launch">
+        Launcher and Java installed, now you can either download or create a Modpack.<br/>
+        <tabs group="launchers">
+            <tab title="PrismLauncher" id="prismlauncherguide">
+                <list type="decimal">
+                    <li>
+                        Sign in with your Microsoft account.
+                        In the top-right is a dropdown for Accounts,
+                        click it and select Manage Accounts,
+                        then in the new window,
+                        select Add Microsoft from the right-hand sidebar.
+                    </li>
+                    <li>
+                        Close the previous window, then in the menu-bar at the top,
+                        select Add Instance.
+                    </li>
+                    <li>
+                        If you want to create a custom Modpack with your own set of mods,
+                        select Custom, then the version of Minecraft you want,
+                        and the ModLoader you want, along with its version.<br/>
+                        <p/>
+                        Otherwise, if you want a prebuilt pack, select a Source from the left-hand sidebar,
+                        search for the one you want (if necessary),
+                        select it, the version, and then OK.
+
+                        <tip>
+                            Some Mods on CurseForge will <format style="bold">not allow</format> for download from 3rd-Party Launchers
+                            (aka, any Launchers that are not CurseForge's own).
+                            If you attempt to download any Mod set this way,
+                            Prism will open a window
+                            for you to download the Mods manually.
+                            <p/>
+                            If you select <shortcut>Open Missing</shortcut> Prism opens all the Mod
+                            links in your browser, and they will automatically download.
+                            When any Blocked Mods are found in the Watched Folders,
+                            the <format color="Red">Not Found</format> text turns to <format color="Green">Found</format>.
+                            <p/>
+                            You can add extra folders for Prism to watch for blocked Mods.
+                            <img src="prism-blocked-mods.png" alt="prismlauncher-blocked-mods"/>
+                        </tip>
+                    </li>
+                    <li>
+                        Depending on how many Mods your Modpack of choice includes,
+                        you may want to allocate more RAM:<br/>
+                        On the right-hand sidebar with the Modpack you downloaded, select Edit,
+                        then in the new window select Settings on the left-hand sidebar,
+                        check the Memory checkbox,
+                        and add the amount of RAM you wish to launch the Modpack with.<br/>
+                        <table width="100">
+                            <tr>
+                                <td>Mebibyte</td>
+                                <td>Gigabytes</td>
+                            </tr>
+                            <tr>
+                                <td>~3800</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>~5700</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>~7600</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>~9500</td>
+                                <td>10</td>
+                            </tr>
+                        </table>
+                        PrismLauncher uses Mebibyte (MiB) for Memory Allocation.
+                        The table above is a guide for how much
+                        they represent in Gigabytes (GB).
+                        For 98% of Modpacks, 8 GB is a sufficient amount,
+                        but you should always consult the ModPack's description for a recommended amount of allocated RAM.
+                        If you intend to play with <a href="What-Are-Shaders.topic">Shaders,</a>
+                        you should allocate a little extra, like 10 GB.
+                        <note>
+                            When allocating RAM,
+                            you must ensure
+                            you leave enough for the Operating System and other applications to use.<br/>
+                            If you allocate the maximum RAM you have in your computer, your computer will crash.
+                        </note>
+                        <note>
+                            If you allocate too much RAM,
+                            you could cause performance issues in Java, and thus Minecraft.
+                            This is because of the <a href="https://medium.com/@AlexanderObregon/understanding-javas-garbage-collection-bc141a2ef31f">Java Garbage Collector</a>,
+                            as if it has to handle so much unused memory,
+                            it will slow down tremendously.<br/>
+                            It is recommended to not allocate more than 12 GB.
+                        </note>
+                    </li>
+                </list>
+            </tab>
+            <tab title="Modrinth App" id="modrinthappguide">
+                <list type="decimal">
+                    <li>
+                        Sign in with your Microsoft account.
+                        On the right-hand sidebar, select the Select Account dropdown,
+                        then select the Not signed in button.
+                        Follow steps to sign in with your Microsoft account in the new window.
+                    </li>
+                    <li>
+                        To download an existing Modpack,
+                        use the left-hand sidebar's Home
+                        and Discover tabs and find a Modpack you want.<br/>
+                        <p/>
+                        To create a custom Modpack, select the Create button in the left-hand sidebar,
+                        then fill out the Name, Icon, ModLoader and Minecraft Version.<br/>
+                        In the same menu, you can import Modpacks already on your computer, via File or Modrinth App can
+                        import from other Launchers.
+                    </li>
+                    <li>
+                        Depending on how many Mods your Modpack of choice includes, you may want to allocate more RAM:
+                        <p/>
+                        If not open already, go to the left-hand sidebar and select your Modpack,
+                        or go to your Library and select it there.
+                        Then select the Settings button next to the Play button,
+                        in the menu select Java and memory, then under Memory allocated,
+                        drag the Slider or type
+                        how much RAM you wish to launch the Modpack with.
+
+                        <table width="100">
+                            <tr>
+                                <td>Megabytes</td>
+                                <td>Gigabytes</td>
+                            </tr>
+                            <tr>
+                                <td>4096</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>6144</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>8192</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>10240</td>
+                                <td>10</td>
+                            </tr>
+                        </table>
+                        Modrinth App uses Megabytes (MB) for Memory Allocation.
+                        The table above is a guide for how much they represent in Gigabytes (GB).
+                        For 98% of Modpacks, 8 GB is a sufficient amount,
+                        but you should always use what the Modpack author recommends.<br/>
+                        If you intend to play with <a href="What-Are-Shaders.topic">Shaders</a>,
+                        you should allocate a little extra, like 10 GB.
+                        <note>
+                            When allocating RAM,
+                            you must ensure
+                            you leave enough for the Operating System and other applications to use.<br/>
+                            If you allocate the maximum RAM in your computer, your computer will crash.
+                        </note>
+                        <note>
+                            If you allocate too much RAM,
+                            you could cause performance issues in Java, and thus Minecraft.
+                            This is because of the <a href="https://medium.com/@AlexanderObregon/understanding-javas-garbage-collection-bc141a2ef31f">Java Garbage Collector</a>,
+                            as if it has to handle so much unused memory,
+                            it will slow down tremendously.<br/>
+                            It is recommended to not allocate more than 12 GB.
+                        </note>
+                    </li>
+                </list>
+            </tab>
+        </tabs>
+        When you've allocated enough Memory, you can select Launch to start the game!
+    </chapter>
 </topic>

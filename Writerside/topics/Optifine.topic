@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="OptiFine" id="Optifine">
+
+    <img src="https://media.tenor.com/8fZKNqWgiyIAAAAj/optifine-this-is-fine.gif"
+         alt="Optifine Dumpster Fire"/>
+        Optifine is a Mod founded many years ago, with the goal of making Minecraft more performant.
+        And it succeeded for a while.
+        <p/>
+        Back in the 1.12 and earlier days, Optifine was a great way to make Minecraft run better,
+        and it had support for Shaders.
+        But nowadays, it is entirely irrelevant, and actually makes the game run worse.<br/>
+        On modern versions, the performance benefits are miniscule to unnoticeable,
+        and loading the game or worlds take at minimum 3x as long.<br/>
+        <p/>
+        You're much better off using mods like <a href="https://modrinth.com/mod/embeddium">Embeddium</a>
+        and <a href="https://modrinth.com/mod/modernfix">ModernFix</a> (they can be installed together!), or for older versions,
+        <a href="https://modrinth.com/mod/vintagefix">VintageFix</a> (1.12.2) or
+        <a href="https://modrinth.com/mod/archaicfix">Archaic Fix</a> (1.7.10).<br/>
+        If you want to use Shaders, check out the guide here: <a href="What-Are-Shaders.topic"/>
+</topic>

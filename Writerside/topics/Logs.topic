@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Logs" id="Logs">
+
+    <chapter title="What is a Log?" id="what-is-a-log">
+        A Log in the context of Minecraft and some programs is a file that is created and written by a program or in this case,
+        Minecraft, and used to store information about what is going on behind-the-scenes. They are extremely helpful for
+        locating errors and other issues.<br/>
+        Minecraft generates three different types of logs, which are detailed below. Some mods may generate their own log files.
+    </chapter>
+
+    <chapter title="Latest Log" id="latest-log">
+        The <shortcut>latest.log</shortcut> can be found in the <shortcut>logs</shortcut> directory in your Instance.
+        This log is automatically generated every time you launch the game, and every mod can write to it, including errors.<br/>
+        When you launch the game and the latest log already exists from a previous session, it will be compressed to <a href="https://en.wikipedia.org/wiki/Gzip"><shortcut>.gz</shortcut></a>.
+    </chapter>
+    <chapter title="Crash Report" id="crash-report">
+        Crash Reports are generated when Minecraft experiences a fatal error. They can be found in the <shortcut>crash-reports</shortcut>
+        directory in your Instance. They are named after the date and time of the crash, making it easy to find the latest crash report.<br/>
+        Crash Reports often contain useful information about what happened and why, but not everything. This is why it's often
+        good practice to provide your <shortcut>latest.log</shortcut> alongside your crash report if you're having a problem.<br/>
+        <p/>
+        The <shortcut>crash-reports</shortcut> directory only generates when a crash occurs, so if you cannot find the directory,
+        you did not experience a crash.
+    </chapter>
+    <chapter title="Debug Log" id="debug-log">
+        The <shortcut>debug.log</shortcut> can be found in the <shortcut>logs</shortcut> directory in your Instance. This log is automatically
+        generated every time you launch the game, and every mod can write to it.<br/>
+        When you launch the game and the debug log already exists from a previous session, it will be compressed to <shortcut>.gz</shortcut> like
+        the Latest log.<br/>
+        <p/>
+        This log often contains extra details that don't need to be written to the Latest log. It is very helpful to include
+        this log when reporting an issue with a Mod.<br/>
+        <p/>
+        Some Launchers have a toggle to enable / disable this log, such as the CurseForge launcher. If you cannot find this log,
+        check your Launcher settings to see if it is disabled.
+    </chapter>
+    <chapter title="What to do with a log?" id="what-to-do-with-a-log">
+        If you are asked to provide a log, here's what you should do to give whoever helping you an easier time:<br/>
+        Locate your log in your file manager, and drag it into this website: <a href="https://mclo.gs">mclo.gs</a> and select Save.
+        When it finishes, copy the link in the address bar and paste it to whoever is helping you. This website formats certain parts
+        of the log for readability, and identifies any errors.<br/>
+        Alternatively you can use a site like <a href="https://pastebin.com/">pastebin</a> or <a href="https://gist.github.com">gist.github</a>,
+        but they will lack the formatting.
+    </chapter>
+</topic>

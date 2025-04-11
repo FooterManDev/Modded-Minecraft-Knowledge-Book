@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="What Are Shaders?" id="What-Are-Shaders">
+
+    Shaders define the look of visuals in Minecraft, and lots of other programs.<br/>
+    For the purpose of this book, Shaders won't be covered in detail, but you can check out the Minecraft Wiki's article
+    for a more in-depth overview: <a href="https://minecraft.wiki/w/Shader">minecraft.wiki/w/Shader</a>
+
+    <chapter title="Is my hardware able to render custom Shaders?" id="is-my-hardware-able-to-render-custom-shaders">
+        Some shader packs aren't complex enough to require very modern hardware. However, in general it's recommended to have
+        an RTX 30 series GPU or newer, and a somewhat recent mid-range or better CPU (Anything within the last 6 years is likely good enough).
+        An extra couple GBs of RAM allocated to the game are also recommended.
+    </chapter>
+
+    <chapter title="How do I use custom Shaders?" id="how-do-i-use-custom-shaders">
+        To enable Shaders, you need a Mod.<br/>
+        For the Fabric and NeoForge Modloader, <a href="https://modrinth.com/mod/iris">Iris</a> is your best friend.
+        Alongside Iris, on Fabric you need <a href="https://modrinth.com/mod/sodium">Sodium</a>,
+        on NeoForge you'll want to use <a href="https://modrinth.com/mod/embeddium">Embeddium</a>
+        alongside <a href="https://modrinth.com/mod/monocle-iris">Monocle</a>.<br/>
+        <p/>
+        To add Shaders, launch the game with the mods above, then head to Options > Video Settings > Shader Packs,
+        then add and enable your Shaders there.
+        <p/>
+        If you somehow stumbled upon Optifine for Shader support, please <format style="bold">do not use it</format>,
+        for reasons explained here: <a href="Optifine.topic"/>
+    </chapter>
+</topic>
