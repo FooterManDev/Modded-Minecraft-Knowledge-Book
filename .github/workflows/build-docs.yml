@@ -15,7 +15,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-      build_dir: ${{ steps.set-artifact.outputs.build_dir }}
+      build_dir: ${{ steps.extract.outputs.build_dir }}
 
     steps:
       - uses: actions/checkout@v4
