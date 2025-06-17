@@ -69,10 +69,11 @@ jobs:
 
       - name: Unzip Writerside output
         run: |
-          ZIP="${{ needs.build.outputs.zip_path }}"
+          ZIP_FILE="$(basename '${{ needs.build.outputs.zip_path }}')"
           DEST="${{ needs.build.outputs.build_dir }}"
+          echo "Unzipping $ZIP_FILE into $DEST"
           mkdir -p "$DEST"
-          unzip "$ZIP" -d "$DEST"
+          unzip "$ZIP_FILE" -d "$DEST"
 
       - name: Deploy to CF
         uses: cloudflare/wrangler-action@v3
