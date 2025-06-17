@@ -33,11 +33,23 @@ jobs:
           BUILD_DIR="artifacts/webHelp${INSTANCE_ID^^}2-all"
           echo "build_dir=$BUILD_DIR" >> "$GITHUB_OUTPUT"
 
+      - name: Upload Built
+        uses: actions/upload-artifact@v4
+        with:
+          name: zip
+          path: ${{ steps.extract.outputs.build_dir }}.zip
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Download Build
+        uses: actions/download-artifact@v4
+        with:
+          name: zip
+          path: .
 
       - name: Unzip Writerside output
         run: |
