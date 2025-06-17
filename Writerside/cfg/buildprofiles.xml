@@ -5,6 +5,8 @@
 
     <variables>
         <primary-color>metallic</primary-color>
+        <custom-favicons>mc_mod.svg,mc_mod.png</custom-favicons>
+        <header-logo>mc_mod.svg</header-logo>
     </variables>
     <build-profile instance="1">
         <variables>
@@ -18,5 +20,6 @@
         <copyright>Modded Minecraft Knowledge Book © 2025 by FooterManDev and Contributors is licensed under CC BY-NC 4.0</copyright>
         <social type="github" href="https://github.com/FooterManDev/Modded-Minecraft-Knowledge-Book"/>
         <social type="discord" href="https://discord.gg/26Xd7cE7Ww"/>
+        <social type="bluesky" href="https://bsky.app/profile/blakebird.bsky.social"/>
     </footer>
 </buildprofiles>
