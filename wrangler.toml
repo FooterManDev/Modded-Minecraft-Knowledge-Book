@@ -1,5 +1,4 @@
 name = "mmkb"
-account_id = "e9ca8e9b31e63c258570ce93559cf3ba"
 compatibility_date = "2025-06-17"
 
 pages_build_output_dir = "artifacts/webHelp12-all"
