@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: zip
-          path: ${{ steps.extract.outputs.build_dir }}.zip
+          path: ${{ steps.extract.outputs.build_dir }}
 
   deploy:
     needs: build
@@ -53,9 +53,9 @@ jobs:
 
       - name: Unzip Writerside output
         run: |
-          ZIP="${{ needs.build.outputs.build_dir }}.zip"
-          mkdir -p "${{ needs.build.outputs.build_dir }}"
-          unzip "$ZIP" -d "${{ needs.build.outputs.build_dir }}"
+          BUILD_DIR="${{ needs.build.outputs.build_dir }}"
+          mkdir -p "$BUILD_DIR"
+          unzip "$BUILD_DIR.zip" -d "$BUILD_DIR"
 
       - name: Deploy to CF
         uses: cloudflare/wrangler-action@v3
