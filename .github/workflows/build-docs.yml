@@ -61,6 +61,12 @@ jobs:
           name: zip
           path: .
 
+      - name: Debug - list everything
+        run: |
+          echo "Working directory: $(pwd)"
+          echo "Contents of repo root:" 
+          ls -R . | sed 's/^/  /'
+
       - name: Unzip Writerside output
         run: |
           ZIP="${{ needs.build.outputs.zip_path }}"
