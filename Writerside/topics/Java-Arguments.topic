@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Java Arguments" id="Java-Arguments">
+
+    Arguments are optional parameters added to enable / disable certain functions of a program.
+
+    <chapter title="Performance" id="performance">
+        Use these arguments to potentially improve performance of Minecraft:
+        <list>
+            <li><shortcut>-Xms</shortcut> | <shortcut>-Xmx</shortcut> ->
+                These values set the Minimum and Maximum amount of RAM memory Java is allowed to use.<br/>
+                It's not recommended to allocate more than 10 Gigabytes unless using Shaders,
+                using too much RAM will potentially overload the Garbage Collector.<br/>
+                Example usage:<br/>
+                <shortcut>-Xms4g -Xmx4g</shortcut> -> 4 GB<br/>
+                <shortcut>-Xms6g -Xmx6g</shortcut> -> 6 GB<br/>
+                <shortcut>-Xms8g -Xmx8g</shortcut> -> 8 GB<br/>
+                <shortcut>-Xms10g -Xmx10g</shortcut> -> 10 GB<br/>
+                <p/>
+                For <b>most</b> ModPacks, 6 or 8 GB is plenty.
+                <br/>
+                <note>
+                Setting these arguments is unnecessary if your <a href="What-is-a-Launcher.topic">Launcher</a> has RAM memory settings.
+                </note>
+            </li>
+            <li>
+                <shortcut>-XX:+AlwaysPreTouch</shortcut> <br/>
+                <i>In Minecraft context</i><br/> Reduces stutters during gameplay.
+            </li>
+            <li>
+                <shortcut>-XX:+UseStringDeduplication</shortcut> <br/>
+                <i>In Minecraft context</i><br/>
+                Saves RAM memory on repetitive string objects, like Block names.<br/>
+                <note>Not recommended above Java 11.</note>
+            </li>
+            <li>
+                <shortcut>-XX:-OptimizeStringConcat</shortcut><br/>
+                <i>In Minecraft context</i><br/>
+                May improve performance in heavy string usage, such as <a href="Logs.topic"/>, Chat, and <a href="What-is-a-Mod.topic">Mod</a> internals.
+            </li>
+        </list>
+    </chapter>
+    <chapter title="Setting Arguments" id="setting-args">
+        If using a <a href="What-is-a-Launcher.topic">Launcher</a>, you can set Java args in the settings, or for individual <a href="What-is-a-Launcher.topic#instance">Instances</a>.
+    </chapter>
+</topic>

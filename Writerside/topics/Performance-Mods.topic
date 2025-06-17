@@ -3,7 +3,7 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
 <topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
-       title="Performance Mods" id="Performance-Mods">
+       title="Performance" id="Performance-Mods">
     <note>
         Each Mod needs more info.
     </note>
@@ -11,7 +11,23 @@
         Surely there are more mods to put here?
     </note>
 
-    If you're looking for ways to improve Minecraft's performance, here's a list of good mods to use:
+    If you're looking for ways to improve Minecraft's performance, these are the main Mods to use:
+
+    <chapter title="Sodium" id="sodium">
+        <a href="https://modrinth.com/mod/sodium">
+            <img
+                    src="https://cdn.modrinth.com/data/AANobbMI/295862f4724dc3f78df3447ad6072b2dcd3ef0c9_96.webp"
+                    alt="sodium"
+                    height="50"
+                    border-effect="rounded"
+                    style="inline"
+            />
+        </a>
+        <br/>
+        <a href="https://modrinth.com/mod/sodium">Sodium</a>
+        is capable of improving performance significantly. It also fixes several other graphical issues and provides
+        some useful features.<br/>
+    </chapter>
 
     <chapter title="Embeddium" id="Embeddium">
         <a href="https://modrinth.com/mod/embeddium">
@@ -22,23 +38,107 @@
                     border-effect="rounded"
                     style="inline"
             />
-            Embeddium
         </a>
+        <br/>
+        <a href="https://modrinth.com/mod/embeddium">Embeddium</a>
         is a fork of <a href="#sodium"/> for
         <a href="Mod-Loaders.topic#neoforge"/> and <a href="Mod-Loaders.topic#lexforge">LexForge</a>.
     </chapter>
-    <chapter title="Sodium" id="sodium">
-        <a href="https://modrinth.com/mod/sodium">
-            <img
-                    src="https://cdn.modrinth.com/data/AANobbMI/295862f4724dc3f78df3447ad6072b2dcd3ef0c9_96.webp"
-                    alt="sodium"
-                    height="50"
-                    border-effect="rounded"
-                    style="inline"
-            />
-            Sodium
-        </a>
-        is capable of improving performance significantly. It also fixes several other graphical issues and provides
-        some useful features.<br/>
+
+    <chapter title="Modern, Vintage, Archaic Fix" id="fix">
+        <a href="https://modrinth.com/mod/modernfix"><img
+            src="https://cdn.modrinth.com/data/nmDcB62a/2af94de5e08ae54567ee86b968fc7ce076d9fee5_96.webp"
+            alt="ModernFix"
+            height="50"
+            border-effect="rounded"
+            style="inline"
+        /></a>
+        <a href="https://modrinth.com/mod/vintagefix"><img
+                src="https://cdn.modrinth.com/data/e6vNsbAm/f4301c04ac94af39af8bfcc61cbcb20a505d459b.png"
+                alt="ModernFix"
+                height="50"
+                border-effect="rounded"
+                style="inline"
+        /></a>
+        <a href="https://modrinth.com/mod/archaicfix"><img
+                src="https://cdn.modrinth.com/data/xTJanN3v/8f4d8f60e363ac3c4f560f0444ff80c3f1b7d61b_96.webp"
+                alt="ModernFix"
+                height="50"
+                border-effect="rounded"
+                style="inline"
+        /></a>
+        <br/>
+        <a href="https://modrinth.com/mod/modernfix">ModernFix</a> implements numerous bug fixes and optimizations for Minecraft 1.16 and newer.
+        <br/>
+        <a href="https://modrinth.com/mod/vintagefix">VintageFix</a> and
+        <a href="https://modrinth.com/mod/archaicfix">ArchaicFix</a> do similar fixes for 1.12.2 and 1.7.10 respectively.
     </chapter>
+
+    <chapter title="Saturn" id="saturn">
+        <a href="https://modrinth.com/mod/saturn"><img
+                src="https://cdn.modrinth.com/data/2eT495vq/e031d27b5a54e4a48c014f38407a8cca43f7d6f7_96.webp"
+                alt="Saturn"
+                height="50"
+                border-effect="rounded"
+                style="inline"
+        />
+        </a>
+        <br/>
+        <a href="https://modrinth.com/mod/saturn">Saturn</a>
+        optimizes Minecraft's RAM memory usage.
+    </chapter>
+
+    <chapter title="Lithium" id="lithium">
+        <a href="https://modrinth.com/mod/lithium"><img
+                src="https://cdn.modrinth.com/data/gvQqBUqZ/bcc8686c13af0143adf4285d741256af824f70b7_96.webp"
+                alt="Lithium"
+                height="50"
+                border-effect="rounded"
+                style="inline"
+        />
+        </a>
+        <br/>
+        <a href="https://modrinth.com/mod/lithium">Lithium</a>
+        optimizes a bunch of Minecraft systems such as Physics, Mob AI, Ticking, and more.
+
+        <p/>
+        Lithium is primarily available on <a href="Mod-Loaders.topic#fabric"/>,
+        but has <a href="Mod-Loaders.topic#neoforge"/> versions for 1.21.1 and newer. <br/>
+        For older versions there is a <a href="Mod-Loaders.topic#lexforge">LexForge</a> fork called <a href="https://modrinth.com/mod/canary">Canary</a>
+        for 1.18.2 - 1.20.4.
+    </chapter>
+
+    <chapter title="Krypton" id="krypton">
+        <a href="https://modrinth.com/mod/krypton"><img
+            src="https://cdn.modrinth.com/data/fQEb0iXm/3ea60899d060a9286e03b87bfa9e71d0cbe2dde7_96.webp"
+            alt="Krypton"
+            height="50"
+            border-effect="rounded"
+            style="inline"
+        />
+        </a>
+        <br/>
+        <a href="https://modrinth.com/mod/krypton">Krypton</a>
+        optimizes network handlers, lowers tick times on Servers, and has several other optimizations.
+
+        <p/>
+        Krypton is for <a href="Mod-Loaders.topic#fabric"/> only,
+        however there is a <a href="Mod-Loaders.topic#lexforge">LexForge</a> fork for 1.18.2 - 1.19.3 called <a href="https://modrinth.com/mod/pluto">Pluto</a>.
+    </chapter>
+
+    <chapter title="Other" id="other">
+        There are of course many more performance <a href="What-is-a-Mod.topic">Mods</a> available,
+        have a quick browse for what you want:<br/>
+        <a href="https://www.curseforge.com/minecraft/search?page=1&amp;pageSize=20&amp;sortBy=relevancy&amp;class=mc-mods&amp;categories=performance">
+        <img src="curseforge.svg" alt="curseforge" height="25" style="inline"/>
+        </a> <a href="https://www.curseforge.com/minecraft/search?page=1&amp;pageSize=20&amp;sortBy=relevancy&amp;class=mc-mods&amp;categories=performance">curseforge.com</a><br/>
+        <a href="https://modrinth.com/mods?f=categories:optimization">
+            <img src="modrinth.svg" alt="modrinth" height="25" style="inline"/>
+        </a>
+        <a href="https://modrinth.com/mods?f=categories:optimization">modrinth.com</a>
+        <p/>
+        Additional performance topics:<br/>
+        <a href="Java-Arguments.topic"/>
+    </chapter>
+
 </topic>
