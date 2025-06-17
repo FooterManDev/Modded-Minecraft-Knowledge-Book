@@ -26,24 +26,27 @@ jobs:
           instance: ${{ env.INSTANCE }}
           docker-version: ${{ env.DOCKER_VERSION }}
 
-      - name: Extract Build Dir
-        id: extract
+      - name: Discover Build Artifacts
+        id: discover
         run: |
-          INSTANCE_ID="${INSTANCE#*/}"
-          BUILD_DIR="artifacts/webHelp${INSTANCE_ID^^}2-all"
+          echo "Workspace contents:"
+          find . -type f -maxdepth 3 | sed 's/^/  /'
+          ZIP_PATH=$(find artifacts -type f -name '*.zip' | head -n 1)
+          if [ -z "$ZIP_PATH" ]; then
+            echo "❌ No ZIP found under artifacts/—check Writerside action output!"
+            exit 1
+          fi
+          BUILD_DIR="${ZIP_PATH%.zip}"
+          echo "Found ZIP: $ZIP_PATH"
+          echo "Derived build_dir: $BUILD_DIR"
+          echo "zip_path=$ZIP_PATH" >> "$GITHUB_OUTPUT"
           echo "build_dir=$BUILD_DIR" >> "$GITHUB_OUTPUT"
-
-      - name: Check Build
-        run: |
-          BUILD_DIR="${{ steps.extract.outputs.build_dir }}"
-          echo "Checking build dir: $BUILD_DIR"
-          ls -R "$BUILD_DIR"
 
       - name: Upload Built
         uses: actions/upload-artifact@v4
         with:
           name: zip
-          path: ${{ steps.extract.outputs.build_dir }}.zip
+          path: ${{ steps.discover.outputs.zip_path }}
 
   deploy:
     needs: build
@@ -59,9 +62,10 @@ jobs:
 
       - name: Unzip Writerside output
         run: |
-          ZIP="${{ needs.build.outputs.build_dir }}.zip"
-          mkdir -p "${{ needs.build.outputs.build_dir }}"
-          unzip "$ZIP" -d "${{ needs.build.outputs.build_dir }}"
+          ZIP="${{ needs.build.outputs.zip_path }}"
+          DEST="${{ needs.build.outputs.build_dir }}"
+          mkdir -p "$DEST"
+          unzip "$ZIP" -d "$DEST"
 
       - name: Deploy to CF
         uses: cloudflare/wrangler-action@v3
