@@ -30,7 +30,8 @@ jobs:
         id: extract
         run: |
           INSTANCE_ID="${INSTANCE#*/}"
-          echo "build_dir=artifacts/webHelp${INSTANCE_ID^^}2-all" >> "$GITHUB_OUTPUT"
+          BUILD_DIR="artifacts/webHelp${INSTANCE_ID^^}2-all"
+          echo "build_dir=$BUILD_DIR" >> "$GITHUB_OUTPUT"
 
   deploy:
     needs: build
@@ -40,10 +41,9 @@ jobs:
 
       - name: Unzip Writerside output
         run: |
-          ZIP_PATH="${{ needs.build.outputs.build_dir }}.zip"
-          DEST_DIR="${{ needs.build.outputs.build_dir }}"
-          mkdir -p "$DEST_DIR"
-          unzip "$ZIP_PATH" -d "$DEST_DIR"
+          ZIP="${{ needs.build.outputs.build_dir }}.zip"
+          mkdir -p "${{ needs.build.outputs.build_dir }}"
+          unzip "$ZIP" -d "${{ needs.build.outputs.build_dir }}"
 
       - name: Deploy to CF
         uses: cloudflare/wrangler-action@v3
