@@ -15,8 +15,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-      zip_path: ${{ steps.discover.outputs.zip_path  }}
-      build_dir: ${{ steps.extract.outputs.build_dir }}
+      zip_path: ${{ steps.discover.outputs.zip_path }}
+      build_dir: ${{ steps.discover.outputs.build_dir }}
 
     steps:
       - uses: actions/checkout@v4
