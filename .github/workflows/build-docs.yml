@@ -26,7 +26,7 @@ jobs:
           instance: ${{ env.INSTANCE }}
           docker-version: ${{ env.DOCKER_VERSION }}
 
-      - name: Extract build dir
+      - name: Extract Build Dir
         id: extract
         run: |
           INSTANCE_ID="${INSTANCE#*/}"
@@ -38,23 +38,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Download Artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: docs
-          path: artifacts
-
-      - name: Unzip Build Output
+      - name: Unzip Writerside output
         run: |
-          FILE="artifacts/${{ needs.build.outputs.build_dir }}.zip"
-          echo "Unzipping $FILE"
-          mkdir -p public
-          unzip -qq "$FILE" -d public
+          ZIP_PATH="${{ needs.build.outputs.build_dir }}.zip"
+          DEST_DIR="${{ needs.build.outputs.build_dir }}"
+          mkdir -p "$DEST_DIR"
+          unzip "$ZIP_PATH" -d "$DEST_DIR"
 
       - name: Deploy to CF
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ env.CF_API_TOK }}
           accountId: ${{ env.CF_ACC_ID }}
-          command: pages deploy public --project-name=mmkb
+          command: pages deploy --project-name=mmkb
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
