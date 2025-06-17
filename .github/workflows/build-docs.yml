@@ -38,10 +38,23 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: docs
+          path: artifacts
+
+      - name: Unzip Build Output
+        run: |
+          FILE="artifacts/${{ needs.build.outputs.build_dir }}.zip"
+          echo "Unzipping $FILE"
+          mkdir -p public
+          unzip -qq "$FILE" -d public
+
       - name: Deploy to CF
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ env.CF_API_TOK }}
           accountId: ${{ env.CF_ACC_ID }}
-          command: pages deploy ${{ needs.build.outputs.build_dir }} --project-name=mmkb
+          command: pages deploy public --project-name=mmkb
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
