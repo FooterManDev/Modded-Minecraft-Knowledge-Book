@@ -17,7 +17,7 @@ jobs:
     outputs:
       zip_path: ${{ steps.discover.outputs.zip_path }}
       build_dir: ${{ steps.discover.outputs.build_dir }}
-      alg_zip: ${{ steps.discover.outputs.algolia_zip }}
+      algolia_zip: ${{ steps.discover.outputs.algolia_zip }}
 
     steps:
       - uses: actions/checkout@v4
