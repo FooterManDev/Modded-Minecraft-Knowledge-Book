@@ -10,7 +10,7 @@
         <header-logo>mc_mod.svg</header-logo>
         <custom-css>main.css</custom-css>
         <algolia-id>QLN54MGB55</algolia-id>
-        <algolia-index>Index</algolia-index>
+        <algolia-index>index</algolia-index>
         <algolia-api-key>7cb465f82e2df29c8db89ac039c3c436</algolia-api-key>
         <algolia-show-logo>true</algolia-show-logo>
     </variables>
