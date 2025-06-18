@@ -147,7 +147,9 @@ jobs:
 
       - name: Unzip Algolia Data
         run: |
-          unzip ./algolia/$(basename "${{ steps.build.outputs.algolia_zip }}") -d ./algolia
+          ZIP_NAME="$(basename '${{ needs.build.outputs.algolia_zip }}')"
+          echo "Unzipping ./algolia/$ZIP_NAME into ./algolia"
+          unzip "./algolia/$ZIP_NAME" -d ./algolia
 
       - name: Setup Algolia CLI
         uses: algolia/setup-algolia-cli@master
