@@ -104,11 +104,10 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          name: zip
+          name: github-pages
           path: ./site
 
       - name: Deploy to GH
         uses: actions/deploy-pages@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifact_name: zip
