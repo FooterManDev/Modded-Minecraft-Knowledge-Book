@@ -119,3 +119,33 @@ jobs:
         uses: actions/deploy-pages@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+
+  deploy-algolia:
+    needs: build
+    runs-on: ubuntu-latest
+    env:
+      ALG_APP_ID: ${{ secrets.ALG_APP_ID }}
+      ALG_ADM_API_KEY: ${{ secrets.ALG_ADM_API_KEY }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download Algolia Indexes
+        uses: actions/download-artifact@v4
+        with:
+          name: zip
+          path: ./algolia
+
+      - name: Unzip Algolia Data
+        run: |
+          find ./algolia -name 'algolia-indexes-*.zip' -exec unzip -d ./algolia {} \;
+
+      - name: Setup Algolia CLI
+        uses: algolia/setup-algolia-cli@master
+
+      - name: Publish Algolia Indexes
+        run: |
+          cd algolia
+          for file in *.json; do
+            algolia import index "$file" --clear
+          done
