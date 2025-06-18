@@ -49,7 +49,7 @@ jobs:
           name: zip
           path: ${{ steps.discover.outputs.zip_path }}
 
-  deploy:
+  deploy-cf:
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -82,3 +82,28 @@ jobs:
           accountId: ${{ env.CF_ACC_ID }}
           command: pages deploy --project-name=mmkb
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+  deploy-gh:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download Build
+        uses: actions/download-artifact
+        with:
+          name: zip
+          path: ./site
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./site
+
+      - name: Deploy to GH
+        uses: actions/deploy-pages@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
