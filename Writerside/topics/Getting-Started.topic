@@ -92,20 +92,20 @@
             </note>
             <p/>
             To install Java, it is recommended to download an installer for the version of your choosing here:
-            <a href="https://adoptium.net/temurin/releases/?os=windows&amp;arch=x64&amp;package=jre">adoptium.net</a><br/>
+            <a href="https://adoptium.net/temurin/releases/?os=windows&amp;arch=x64&amp;package=jre">adoptium.net</a>
 
-            <list type="decimal">
-                <li>Set the version of Java you want to install.</li>
-                <li>Download the <shortcut>.msi</shortcut>. It is not recommended to download the <shortcut>.zip</shortcut> archive if you are a beginner, as it is for manual installation.</li>
-                <li>
+            <procedure title="" id="java-proc">
+                <step>Set the version of Java you want to install.</step>
+                <step>Download the <shortcut>.msi</shortcut>. It is not recommended to download the <shortcut>.zip</shortcut> archive if you are a beginner, as it is for manual installation.</step>
+                <step>
                     Locate the file and double-click it in the File Explorer to run the installer,
                     then follow the steps in the window.<br/>
                     If you are asked to set the version you downloaded as the default across all applications, do not,
                     as it could break other applications.
                     For example, if you downloaded Java 17 and you set it as default, it could break anything
                     using Java 8.
-                </li>
-            </list>
+                </step>
+            </procedure>
         </tab>
         <tab id="linux" title="Linux" group-key="linux">
             <note>
@@ -139,57 +139,55 @@
                 Before continuing, if you have installed a Launcher that supports downloading Java, use their methods.
             </note>
 
-            To install Java, you can use Homebrew or download a pkg:
+            To install Java, follow one of these methods:
             <p/>
             <br/>
 
-            <format style="bold">Homebrew:</format>
-            <list type="decimal">
-                <li>First you need to add this repository: <shortcut>brew tap homebrew/cask-versions</shortcut></li>
-                <li>
+            <procedure title="Homebrew" id="homebrew">
+                <step>First you need to add this repository: <shortcut>brew tap homebrew/cask-versions</shortcut></step>
+                <step>
                     Then install Java: <shortcut>brew install --cask temurin@$version</shortcut>
                     <br/>
                     Replace <shortcut>$version</shortcut> with the version you want
                     <br/>
                     Example: <shortcut>brew install --cask temurin@8</shortcut>
-                </li>
-            </list>
+                </step>
+            </procedure>
 
-            <format style="bold">Download pkg:</format>
-            <list type="decimal">
-                <li>Visit <a href="https://adoptium.net/temurin/releases/?os=mac&amp;arch=any&amp;package=jre">adoptium.net</a></li>
+            <procedure title="Download pkg" id="download-pkg">
+                <step>Visit <a href="https://adoptium.net/temurin/releases/?os=mac&amp;arch=any&amp;package=jre">adoptium.net</a></step>
 
-                <li>Set the version of Java you want to install.</li>
+                <step>Set the version of Java you want to install.</step>
 
-                <li>
+                <step>
                     Depending on your Mac's CPU Architecture, select the <shortcut>.pkg</shortcut> to download.<br/>
                     If you have an Intel CPU, select the <shortcut>x64</shortcut> file.<br/>
                     If you have an Apple Silicon CPU (M1, M2, etc.), select the <shortcut>aarch64</shortcut> file.
-                </li>
+                </step>
 
-                <li>
+                <step>
                 Locate the file and double-click it in Finder to run the installer,
                 then follow the steps in the window.
-                </li>
-            </list>
+                </step>
+            </procedure>
         </tab>
 
         <tab title="PrismLauncher" id="prismlauncher">
-            <list type="decimal">
-                <li>Open PrismLauncher's Settings using a button using the bar near the top of the window</li>
-                <li>Select Java from the sidebar</li>
-                <li>On the right, select Management</li>
-                <li>Click Download</li>
-                <li>A window will open where you can select whichever version of Java you want and download it.</li>
-            </list>
+            <procedure title="" id="prism-java">
+                <step>Open PrismLauncher's Settings using a button using the bar near the top of the window</step>
+                <step>Select Java from the sidebar</step>
+                <step>On the right, select Management</step>
+                <step>Click Download</step>
+                <step>A window will open where you can select whichever version of Java you want and download it.</step>
+            </procedure>
         </tab>
 
         <tab title="Modrinth App" id="modrinth">
-            <list type="decimal">
-                <li>Open the Settings menu using the Cogwheel / Gear button in the bottom left</li>
-                <li>Select Java Installations</li>
-                <li>On Java 21, 17 or 8 locations, select Install Recommended.</li>
-            </list>
+            <procedure title="" id="modrinth-java">
+                <step>Open the Settings menu using the Cogwheel / Gear button in the bottom left</step>
+                <step>Select Java Installations</step>
+                <step>On Java 21, 17 or 8 locations, select Install Recommended.</step>
+            </procedure>
         </tab>
     </tabs>
     </chapter>
@@ -197,20 +195,20 @@
     <chapter title="Time to Launch" id="time-to-launch">
         Launcher and Java installed, now you can either download or create a Modpack.<br/>
         <tabs group="launchers">
-            <tab title="PrismLauncher" id="prismlauncherguide">
-                <list type="decimal">
-                    <li>
+            <tab title="PrismLauncher" id="prism-launcher-guide">
+                <procedure title="" id="prism-guide-steps">
+                    <step>
                         Sign in with your Microsoft account.
                         In the top-right is a dropdown for Accounts,
                         click it and select Manage Accounts,
                         then in the new window,
                         select Add Microsoft from the right-hand sidebar.
-                    </li>
-                    <li>
+                    </step>
+                    <step>
                         Close the previous window, then in the menu-bar at the top,
                         select Add Instance.
-                    </li>
-                    <li>
+                    </step>
+                    <step>
                         If you want to create a custom Modpack with your own set of mods,
                         select Custom, then the version of Minecraft you want,
                         and the ModLoader you want, along with its version.<br/>
@@ -234,8 +232,8 @@
                             You can add extra folders for Prism to watch for blocked Mods.
                             <img src="prism-blocked-mods.png" alt="prismlauncher-blocked-mods"/>
                         </tip>
-                    </li>
-                    <li>
+                    </step>
+                    <step>
                         Depending on how many Mods your Modpack of choice includes,
                         you may want to allocate more RAM:<br/>
                         On the right-hand sidebar with the Modpack you downloaded, select Edit,
@@ -285,18 +283,18 @@
                             it will slow down tremendously.<br/>
                             It is recommended to not allocate more than 12 GB.
                         </note>
-                    </li>
-                </list>
+                    </step>
+                </procedure>
             </tab>
-            <tab title="Modrinth App" id="modrinthappguide">
-                <list type="decimal">
-                    <li>
+            <tab title="Modrinth App" id="modrinth-app-guide">
+                <procedure title="" id="modrinth-app-guide-steps">
+                    <step>
                         Sign in with your Microsoft account.
                         On the right-hand sidebar, select the Select Account dropdown,
                         then select the Not signed in button.
                         Follow steps to sign in with your Microsoft account in the new window.
-                    </li>
-                    <li>
+                    </step>
+                    <step>
                         To download an existing Modpack,
                         use the left-hand sidebar's Home
                         and Discover tabs and find a Modpack you want.<br/>
@@ -305,8 +303,8 @@
                         then fill out the Name, Icon, ModLoader and Minecraft Version.<br/>
                         In the same menu, you can import Modpacks already on your computer, via File or Modrinth App can
                         import from other Launchers.
-                    </li>
-                    <li>
+                    </step>
+                    <step>
                         Depending on how many Mods your Modpack of choice includes, you may want to allocate more RAM:
                         <p/>
                         If not open already, go to the left-hand sidebar and select your Modpack,
@@ -358,8 +356,8 @@
                             it will slow down tremendously.<br/>
                             It is recommended to not allocate more than 12 GB.
                         </note>
-                    </li>
-                </list>
+                    </step>
+                </procedure>
             </tab>
         </tabs>
         When you've allocated enough Memory, you can select Launch to start the game!
