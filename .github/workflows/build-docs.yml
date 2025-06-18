@@ -105,6 +105,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./site
+          name: github-pages
 
       - name: Deploy to GH
         uses: actions/deploy-pages@v4
