@@ -43,8 +43,14 @@ jobs:
           echo "zip_path=$ZIP_PATH"        >> "$GITHUB_OUTPUT"
           echo "build_dir=$BUILD_DIR"     >> "$GITHUB_OUTPUT"
 
-      - name: Upload Built
+      - name: Upload Build
         uses: actions/upload-artifact@v4
+        with:
+          name: zip
+          path: ${{ steps.discover.outputs.zip_path }}
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           name: zip
           path: ${{ steps.discover.outputs.zip_path }}
@@ -93,21 +99,8 @@ jobs:
       name: github-pages
 
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Download Build
-        uses: actions/download-artifact@v4
-        with:
-          name: zip
-          path: .
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./site
-          name: github-pages
-
       - name: Deploy to GH
         uses: actions/deploy-pages@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          artifact_name: zip
