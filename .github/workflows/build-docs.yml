@@ -61,13 +61,13 @@ jobs:
           name: zip
           path: .
 
-      - name: Debug - list everything
+      - name: Debug - List Everything
         run: |
           echo "Working directory: $(pwd)"
           echo "Contents of repo root:" 
           ls -R . | sed 's/^/  /'
 
-      - name: Unzip Writerside output
+      - name: Unzip Writerside Output
         run: |
           ZIP_FILE="$(basename '${{ needs.build.outputs.zip_path }}')"
           DEST="${{ needs.build.outputs.build_dir }}"
@@ -101,11 +101,19 @@ jobs:
           name: zip
           path: ./site
 
-      - name: Upload Pages artifact
+      - name: Unzip Writerside Output
+        run: |
+          ZIP_FILE="$(basename '${{ needs.build.outputs.zip_path }}')"
+          DEST_DIR="./site/${{ needs.build.outputs.build_dir }}"
+          echo "Unzipping $ZIP_FILE into $DEST_DIR"
+          mkdir -p "$DEST_DIR"
+          unzip "./site/$ZIP_FILE" -d "$DEST_DIR"
+
+      - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           name: github-pages
-          path: ./site
+          path: ./site/${{ needs.build.outputs.build_dir }}
 
       - name: Deploy to GH
         uses: actions/deploy-pages@v4
