@@ -101,6 +101,11 @@ jobs:
           name: zip
           path: ./site
 
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./site
+
       - name: Deploy to GH
         uses: actions/deploy-pages@v4
         with:
