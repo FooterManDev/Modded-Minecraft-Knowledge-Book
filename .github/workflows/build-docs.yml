@@ -147,5 +147,5 @@ jobs:
         run: |
           cd algolia
           for file in *.json; do
-            algolia import index "$file" --clear
+            algolia objects import Index -F "$file"
           done
