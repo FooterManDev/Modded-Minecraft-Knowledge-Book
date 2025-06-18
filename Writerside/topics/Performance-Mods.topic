@@ -6,13 +6,6 @@
        title="Performance" id="Performance-Mods">
     <primary-label ref="footermandev"/>
 
-    <note>
-        Each Mod needs more info.
-    </note>
-    <note>
-        Surely there are more mods to put here?
-    </note>
-
     If you're looking for ways to improve Minecraft's performance, these are the main Mods to use:
 
     <chapter title="Sodium" id="sodium">
