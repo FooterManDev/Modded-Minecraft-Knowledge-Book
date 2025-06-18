@@ -4,6 +4,7 @@
 <topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="Everything MultiMC" id="Everything-MultiMC">
+    <primary-label ref="footermandev"/>
 
     <a href="https://multimc.org/">MultiMC</a> is a modded Minecraft Launcher, born from the Modded Minecraft community
     to make handling multiple Modded instances easier than the official Minecraft Launcher.<br/>

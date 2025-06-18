@@ -4,6 +4,8 @@
 <topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="CurseForge" id="CurseForge">
+    <primary-label ref="footermandev"/>
+
     <img src="curseforge.svg" alt="CurseForge" width="144" height="144"/>
 
     <a href="https://curseforge.com">CurseForge</a> is a platform for distributing Modded content for a number of different games, most notably Minecraft.

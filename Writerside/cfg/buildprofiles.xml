@@ -5,8 +5,10 @@
 
     <variables>
         <primary-color>metallic</primary-color>
+        <link-color>#3DACFF</link-color>
         <custom-favicons>mc_mod.svg,mc_mod.png</custom-favicons>
         <header-logo>mc_mod.svg</header-logo>
+        <custom-css>main.css</custom-css>
     </variables>
     <build-profile instance="1">
         <variables>

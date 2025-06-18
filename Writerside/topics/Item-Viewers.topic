@@ -4,6 +4,7 @@
 <topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="Item Viewers" id="Item-Viewers">
+    <primary-label ref="footermandev"/>
 
     Item Viewers gather all Items in the game and displays them in a grid next to your Inventory,
     and provides means to search for Items.

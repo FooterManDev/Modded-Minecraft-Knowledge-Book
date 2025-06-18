@@ -4,6 +4,7 @@
 <topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="Logs" id="Logs">
+    <primary-label ref="footermandev"/>
 
     <chapter title="What is a Log?" id="what-is-a-log">
         A Log in the context of Minecraft and some programs is a file that is created and written by a program or in this case,

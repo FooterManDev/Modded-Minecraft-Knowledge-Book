@@ -4,6 +4,7 @@
 <topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="What is a ModPack?" id="What-is-a-ModPack">
+    <primary-label ref="footermandev"/>
 
     <!-- TODO: This guide needs to be rewritten with better info about packaged ModPacks. For the moment it's fine. -->
 

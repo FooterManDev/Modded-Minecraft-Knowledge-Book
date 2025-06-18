@@ -4,10 +4,9 @@
 <topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="What is LWJGL?" id="What-is-LWJGL">
+    <primary-label ref="footermandev"/>
+    <secondary-label ref="mcctx"/>
 
-    <note>
-        This topic is in the context of Minecraft only.
-    </note>
     <note>
         This topic could use some more information.
     </note>
