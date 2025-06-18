@@ -49,12 +49,6 @@ jobs:
           name: zip
           path: ${{ steps.discover.outputs.zip_path }}
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          name: zip
-          path: ${{ steps.discover.outputs.zip_path }}
-
   deploy-cf:
     needs: build
     runs-on: ubuntu-latest
@@ -99,6 +93,20 @@ jobs:
       name: github-pages
 
     steps:
+      - uses: actions/checkout@v4
+
+      - name: Download Build
+        uses: actions/download-artifact@v4
+        with:
+          name: zip
+          path: ./site
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          name: zip
+          path: ./site
+
       - name: Deploy to GH
         uses: actions/deploy-pages@v4
         with:
