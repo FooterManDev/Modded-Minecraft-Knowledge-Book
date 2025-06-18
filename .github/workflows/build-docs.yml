@@ -99,7 +99,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: zip
-          path: .
+          path: ./site
 
       - name: Deploy to GH
         uses: actions/deploy-pages@v4
