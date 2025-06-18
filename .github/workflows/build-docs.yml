@@ -33,7 +33,7 @@ jobs:
         run: |
           echo "Workspace contents:"
           find . -type f -maxdepth 3 | sed 's/^/  /'
-          ZIP_PATH=$(find artifacts -type f -name '*.zip' ! -name 'algolia-indexes-*.zip' | head -n 1)
+          ZIP_PATH=$(find artifacts -type f -name '*.zip' ! -name 'algolia-indexes-*.zip' | head -n1)
           ALG_ZIP=$(find artifacts -type f -name 'algolia-indexes-*.zip' | head -n1)
           if [ -z "$ZIP_PATH" ]; then
             echo "❌ No ZIP found under artifacts/—check Writerside action output!"
