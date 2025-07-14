@@ -47,4 +47,24 @@
         Alternatively you can use a site like <a href="https://pastebin.com/">pastebin</a> or <a href="https://gist.github.com">gist.github</a>,
         but they will lack the formatting.
     </chapter>
+
+    <chapter title="Reading a Log" id="reading-a-log">
+        This is an in-depth guide to exploring the contents of a Log.
+        <p/>
+        <chapter title="Entries" id="entries">
+            Every Log entry will follow the same format in order from left-to-right:
+            <p/>
+            <shortcut>[31January2025 12:00:00:000]</shortcut> → Date and Time <br/>
+            <shortcut>[****/INFO]</shortcut>, <shortcut>[****/WARN]</shortcut>, <shortcut>[****/ERROR]</shortcut>, <shortcut>[****/FATAL]</shortcut> →
+            The first portion indicates which part of the game reported the entry. The second portion indicates the severity level. <br/>
+            <shortcut>[****]:</shortcut> → Indicates what reported the entry. It can be a class name with or without the full identifier
+            (e.g. net.minecraft.ClassName), a Mod ID or any custom name provided by the source.
+        </chapter>
+        <p/>
+        <chapter title="Fatal Errors" id="errors">
+            Entries marked as <shortcut>/FATAL</shortcut> indicate the game has stopped running due to an issue it couldn't handle.
+            This can close the game or freeze it, anything that prevents it from doing anything.<br/>
+            Usually it will create a <a href="#crash-report"/>, and show its contents in the <a href="#latest-log"/>.
+        </chapter>
+    </chapter>
 </topic>

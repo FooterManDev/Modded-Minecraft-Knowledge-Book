@@ -22,7 +22,7 @@
     <toc-element topic="Mod-Loaders.topic"/>
     <toc-element topic="Modrinth.topic"/>
     <toc-element topic="CurseForge.topic"/>
-    <toc-element toc-title="Troubleshooting">
+    <toc-element topic="Troubleshooting.topic">
         <toc-element topic="Logs.topic"/>
     </toc-element>
     <toc-element toc-title="Controversies">
