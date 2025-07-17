@@ -24,7 +24,7 @@ Available topics:
 * [OptiFine](https://mmkb.pages.dev/optifine)
 * [Mod Loaders](https://mmkb.pages.dev/mod-loaders.html)
 * [Modrinth](https://mmkb.pages.dev/modrinth.html) and [CurseForge](https://mmkb.pages.dev/curseforge.html)
-* Troubleshooting
+* [Troubleshooting](https://mmkb.pages.dev/troubleshooting.html)
   * [Logs](https://mmkb.pages.dev/logs.html)
 * Controversies
   * [Everything MultiMC](https://mmkb.pages.dev/everything-multimc.html)
