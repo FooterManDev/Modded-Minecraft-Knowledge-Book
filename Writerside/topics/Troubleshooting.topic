@@ -4,6 +4,13 @@
 <topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="Troubleshooting" id="Troubleshooting">
+    <primary-label ref="footermandev"/>
+    <var name="sum" value="Guides for troubleshooting various problems"/>
+    <card-summary>%sum%</card-summary>
+    <link-summary>%sum%</link-summary>
+    <web-summary>%sum%</web-summary>
+
+    %sum%
 
     <chapter title="Exit Code 1" id="exit-code-1">
         <img src="what-in-the-name-of-all-that-is-holy-does-exit-code-1-mean-v0-sptg1eaf70bb1.webp" alt="Exit Code"/>

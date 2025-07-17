@@ -5,6 +5,10 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="What is a Launcher?" id="What-is-a-Launcher">
     <primary-label ref="footermandev"/>
+    <var name="sum" value="Launchers facilitate the process of managing Modded MC Instances, as well as installing and updating everything needed to run them."/>
+    <card-summary>%sum%</card-summary>
+    <link-summary>%sum%</link-summary>
+    <web-summary>%sum%</web-summary>
 
     <!-- TODO: Add Launcher specific documentation. -->
     <note>

@@ -5,8 +5,12 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="Java Arguments" id="Java-Arguments">
     <primary-label ref="footermandev"/>
+    <var name="sum" value="Arguments are optional parameters added to enable / disable certain functions of a program."/>
+    <card-summary>%sum%</card-summary>
+    <link-summary>%sum%</link-summary>
+    <web-summary>%sum%</web-summary>
 
-    Arguments are optional parameters added to enable / disable certain functions of a program.
+    %sum%
 
     <chapter title="Performance" id="performance">
         Use these arguments to potentially improve performance of Minecraft:

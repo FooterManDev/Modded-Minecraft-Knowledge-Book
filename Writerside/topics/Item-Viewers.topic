@@ -5,9 +5,13 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="Item Viewers" id="Item-Viewers">
     <primary-label ref="footermandev"/>
+    <var name="sum" value="Item Viewers gather all Items in the game and display them in a grid next to your Inventory
+    and provides means to search for Items."/>
+    <card-summary>%sum%</card-summary>
+    <link-summary>%sum%</link-summary>
+    <web-summary>%sum%</web-summary>
 
-    Item Viewers gather all Items in the game and displays them in a grid next to your Inventory,
-    and provides means to search for Items.
+    %sum%
     <p/>
     Left-Clicking on any Item will show how to obtain it. For example, clicking a Diamond Sword will show it's crafting recipe.<br/>
     Right-Clicking on any Item will show Recipes that include the Item.

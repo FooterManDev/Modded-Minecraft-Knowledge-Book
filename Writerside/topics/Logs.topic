@@ -5,6 +5,10 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="Logs" id="Logs">
     <primary-label ref="footermandev"/>
+    <var name="sum" value="General information about Log files, and how to read / handle them."/>
+    <card-summary>%sum%</card-summary>
+    <link-summary>%sum%</link-summary>
+    <web-summary>%sum%</web-summary>
 
     <chapter title="What is a Log?" id="what-is-a-log">
         A Log in the context of Minecraft and some programs is a file that is created and written by a program or in this case,

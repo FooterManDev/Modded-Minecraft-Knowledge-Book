@@ -6,6 +6,10 @@
        title="What is LWJGL?" id="What-is-LWJGL">
     <primary-label ref="footermandev"/>
     <secondary-label ref="mcctx"/>
+    <var name="sum" value="LWJGL is a Java game library that provides useful APIs for OpenGL."/>
+    <card-summary>%sum%</card-summary>
+    <link-summary>%sum%</link-summary>
+    <web-summary>%sum%</web-summary>
 
     <note>
         This topic could use some more information.
@@ -13,8 +17,4 @@
 
     <a href="https://www.lwjgl.org/">LWJGL</a> is a Java game library that provides useful APIs for
     <a href="https://www.opengl.org/">OpenGL</a>. Minecraft uses LWJGL for rendering with OpenGL.
-
-    <link-summary>
-        LWJGL is a Java game library that provides useful APIs for OpenGL.
-    </link-summary>
 </topic>

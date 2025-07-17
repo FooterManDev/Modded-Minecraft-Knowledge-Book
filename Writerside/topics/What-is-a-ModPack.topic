@@ -5,6 +5,10 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="What is a ModPack?" id="What-is-a-ModPack">
     <primary-label ref="footermandev"/>
+    <var name="sum" value="A ModPack is a collection of Mods that are configured in specific ways to create a unique Modded MC experience."/>
+    <card-summary>%sum%</card-summary>
+    <link-summary>%sum%</link-summary>
+    <web-summary>%sum%</web-summary>
 
     <!-- TODO: This guide needs to be rewritten with better info about packaged ModPacks. For the moment it's fine. -->
 
@@ -12,7 +16,7 @@
         This topic needs more information.
     </note>
 
-    A ModPack is a collection of Mods that are configured in specific ways to create a unique Modded MC experience.
+    %sum%
 
     <chapter title="Getting a ModPack" id="getting-a-modpack">
         ModPacks are generally available for download on <a href="Modrinth.topic"/> and <a href="CurseForge.topic"/>.

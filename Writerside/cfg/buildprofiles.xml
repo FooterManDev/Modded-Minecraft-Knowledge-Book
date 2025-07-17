@@ -3,6 +3,8 @@
 <buildprofiles xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/build-profiles.xsd"
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
+    <llms-txt single-file="true"/>
+
     <variables>
         <primary-color>metallic</primary-color>
         <link-color>#3DACFF</link-color>
@@ -13,6 +15,9 @@
         <algolia-index>index</algolia-index>
         <algolia-api-key>7cb465f82e2df29c8db89ac039c3c436</algolia-api-key>
         <algolia-show-logo>true</algolia-show-logo>
+        <contribute-url>https://github.com/FooterManDev/Modded-Minecraft-Knowledge-Book/tree/master/Writerside</contribute-url>
+        <enable-contribution>true</enable-contribution>
+        <og-image>https://raw.githubusercontent.com/FooterManDev/Modded-Minecraft-Knowledge-Book/refs/heads/master/Writerside/images/mc_mod.png</og-image>
     </variables>
     <build-profile instance="1">
         <variables>

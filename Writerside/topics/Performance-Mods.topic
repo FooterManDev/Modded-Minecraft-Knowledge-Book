@@ -5,6 +5,11 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="Performance" id="Performance-Mods">
     <primary-label ref="footermandev"/>
+    <var name="sum" value="Various ways to improve performance."/>
+    <card-summary>%sum%</card-summary>
+    <link-summary>%sum%</link-summary>
+    <web-summary>%sum%</web-summary>
+    <!--TODO: Add more stuff-->
 
     If you're looking for ways to improve Minecraft's performance, these are the main Mods to use:
 

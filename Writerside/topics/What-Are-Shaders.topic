@@ -5,8 +5,13 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="What Are Shaders?" id="What-Are-Shaders">
     <primary-label ref="footermandev"/>
+    <var name="sum" value="Shaders define the look of visuals in Minecraft, and lots of other programs."/>
+    <card-summary>%sum%</card-summary>
+    <link-summary>%sum%</link-summary>
+    <web-summary>%sum%</web-summary>
 
-    Shaders define the look of visuals in Minecraft, and lots of other programs.<br/>
+    %sum%
+    <br/>
     For the purpose of this book, Shaders won't be covered in detail, but you can check out the Minecraft Wiki's article
     for a more in-depth overview: <a href="https://minecraft.wiki/w/Shader">minecraft.wiki/w/Shader</a>
 

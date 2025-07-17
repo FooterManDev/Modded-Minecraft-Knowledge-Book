@@ -5,10 +5,12 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="Getting Started" id="Getting-Started">
     <primary-label ref="footermandev"/>
+    <var name="sum" value="How do get started playing Modded Minecraft"/>
+    <card-summary>%sum%</card-summary>
+    <link-summary>%sum%</link-summary>
+    <web-summary>%sum%</web-summary>
 
-    <card-summary>
-        How do get started playing Modded Minecraft
-    </card-summary>
+    %sum%
 
     <chapter title="Prerequisites" id="prerequisites">
     To play Modded Minecraft, you will need a few things:

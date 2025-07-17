@@ -5,8 +5,12 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="CurseForge" id="CurseForge">
     <primary-label ref="footermandev"/>
-
-    <img src="curseforge.svg" alt="CurseForge" width="144" height="144"/>
+    <var name="sum" value="CurseForge is a platform for distributing Modded content for a number of different games, most notably Minecraft."/>
+    <card-summary>%sum%</card-summary>
+    <link-summary>%sum%</link-summary>
+    <web-summary>%sum%</web-summary>
+    <icon src="../images/curseforge.svg" width="128" height="128"/>
+    <br/>
 
     <a href="https://curseforge.com">CurseForge</a> is a platform for distributing Modded content for a number of different games, most notably Minecraft.
 

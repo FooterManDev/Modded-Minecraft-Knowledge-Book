@@ -5,6 +5,11 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="Energy" id="Energy">
     <primary-label ref="footermandev"/>
+    <var name="sum" value="Energy is often found in Mods in relation to Power and Machinery. It is implemented in different ways across Mods
+    and ModLoaders."/>
+    <card-summary>%sum%</card-summary>
+    <link-summary>%sum%</link-summary>
+    <web-summary>%sum%</web-summary>
 
     Energy is often found in Mods in relation to Power and Machinery. It is implemented in different ways across Mods
     and <a href="Mod-Loaders.topic"/>.

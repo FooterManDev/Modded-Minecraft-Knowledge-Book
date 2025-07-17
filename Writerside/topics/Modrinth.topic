@@ -5,8 +5,12 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="Modrinth" id="Modrinth">
     <primary-label ref="footermandev"/>
-
-    <img src="modrinth.svg" alt="Modrinth" width="144" height="144"/>
+    <var name="sum" value="Modrinth is a platform for distributing Modded Minecraft content."/>
+    <card-summary>%sum%</card-summary>
+    <link-summary>%sum%</link-summary>
+    <web-summary>%sum%</web-summary>
+    <icon src="../images/modrinth.svg" width="128" height="128"/>
+    <br/>
 
     <a href="https://modrinth.com">Modrinth</a> is a platform for distributing Modded Minecraft content.
 
