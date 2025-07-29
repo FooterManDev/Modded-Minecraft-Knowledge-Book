@@ -1,8 +1,0 @@
-## Content Update
-
-* Added [Fluids topic](https://mmkb.pages.dev/fluids)
-* Modified [Energy topic](https://mmkb.pages.dev/energy)
-
----
-
-7/29/25
