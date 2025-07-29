@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="About" id="About">
+
+    General information about the MMKB website.
+
+    <chapter title="Changelog" id="changelog">
+        <code-block noinject="true" lang="Vim" src="https://raw.githubusercontent.com/FooterManDev/Modded-Minecraft-Knowledge-Book/refs/heads/master/changelog"/>
+    </chapter>
+    <chapter title="Social" id="social">
+        <img
+                src="github-mark.svg"
+                dark-src="github-mark-white.svg"
+                alt="GitHub"
+                style="inline"
+                border-effect="none"
+                    height="50"
+        />
+        <a href="https://github.com/FooterManDev/Modded-Minecraft-Knowledge-Book">FooterManDev/Modded-Minecraft-Knowledge-Book</a>
+        <p/>
+        <img
+                src="Discord-Symbol-Blurple.svg"
+                alt="Discord"
+                style="inline"
+                border-effect="none"
+                height="50"
+        />
+        <a href="https://discord.gg/26Xd7cE7Ww">Projects by FooterMan</a>
+        <p/>
+        <img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Bluesky_Logo.svg"
+                alt="BlueSky"
+                style="inline"
+                border-effect="none"
+                height="50"
+        />
+        <a href="https://bsky.app/profile/fmdev.bsky.social">FooterMan on BlueSky</a>
+    </chapter>
+</topic>

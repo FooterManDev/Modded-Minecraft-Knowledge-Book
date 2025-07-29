@@ -30,4 +30,5 @@
         <toc-element topic="Everything-MultiMC.topic"/>
         <toc-element topic="The-Forge-Fork.topic"/>
     </toc-element>
+    <toc-element topic="About.topic"/>
 </instance-profile>
