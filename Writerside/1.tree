@@ -15,6 +15,7 @@
     <toc-element topic="What-is-LWJGL.topic"/>
     <toc-element topic="Mod-Loaders.topic"/>
     <toc-element topic="Energy.topic"/>
+    <toc-element topic="Fluids.topic"/>
     <toc-element topic="Item-Viewers.topic"/>
     <toc-element topic="Performance-Mods.topic">
         <toc-element topic="Java-Arguments.topic"/>

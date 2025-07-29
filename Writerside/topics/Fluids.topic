@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Fluids" id="Fluids">
+
+    <primary-label ref="footermandev"/>
+    <var name="sum" value=""/>
+<!--    <card-summary>%sum%</card-summary>-->
+<!--    <link-summary>%sum%</link-summary>-->
+<!--    <web-summary>%sum%</web-summary>-->
+
+    %sum%
+
+    <p/>
+
+    <chapter title="Milli-Buckets and Droplets" id="units">
+        Milli-Buckets <b>mB</b> is the standard unit of Fluid for containers in the <a href="Mod-Loaders.topic#lexforge"/>
+        and <a href="Mod-Loaders.topic#neoforge"/> ecosystems. <p/>
+        The <a href="Mod-Loaders.topic#fabric"/> counterpart is <b>Droplets</b>.
+
+        <p/>
+
+        The table below compares the default fluid volumes for standard metal forms:
+
+        <table>
+            <tr>
+                <td>Form</td>
+                <td>Milli-Buckets (before 1.18)</td>
+                <td>Milli-Buckets (1.18 and after)</td>
+                <td>Droplets</td>
+            </tr>
+            <tr>
+                <td>Ingot</td>
+                <td>144</td>
+                <td>90</td>
+                <td>9000</td>
+            </tr>
+            <tr>
+                <td>Nugget</td>
+                <td>16</td>
+                <td>10</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>Block</td>
+                <td>1296</td>
+                <td>810</td>
+                <td rowspan="2">81000</td>
+            </tr>
+            <tr>
+                <td>Filled Bucket</td>
+                <td colspan="2">1000</td>
+            </tr>
+        </table>
+    </chapter>
+
+    <chapter title="Fluid Containers" id="containers">
+        Fluids can be dumped into certain blocks that can hold them, like a Cauldron. <br/>
+        Not like a Slab which places the liquid in the world.
+        <p/>
+        Some Mods can add their own blocks that can contain and use Fluids for certain purposes.
+        A common one is for fluid Storage, often in the form of a Tank.
+        <p/>
+        Generally, Fluids can be dumped into blocks by right-clicking with a filled Bucket.
+        They can also be taken out of blocks by right-clicking with an empty Bucket.
+        <b>Not all blocks support this functionality</b>, and could only accept specific fluids.
+        <p/>
+        Items can also hold Fluids, like a bucket that could hold nine extra source blocks worth of Fluid, for example. <br/>
+        The same can be said for Entities.
+    </chapter>
+
+    <chapter title="Non-Liquids" id="non-liquids">
+        Some Mods have custom fluid-like systems, most notably Gasses.
+        <p/>
+        The functionality of Gasses in particular differs from mod-to-mod.
+        Some can be picked up with a bucket, or flow upwards in the world.
+        <p/>
+        There are other kinds of non-liquids, such as <a href="https://modrinth.com/mod/mekanism">Mekanism's</a>
+        several of its own, known as Gas, Pigment, Infuse, and Heat,
+        or <a href="https://modrinth.com/mod/pneumaticcraft-repressurized">PneumaticCraft's</a> Air,
+        or <a href="https://botaniamod.net/index.html">Botania's</a> Mana.
+    </chapter>
+</topic>
