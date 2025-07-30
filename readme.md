@@ -1,10 +1,12 @@
 
 <div align="center" style="margin-top: 30px; margin-bottom: -15px">
+<a href="https://mmkb.pages.dev/">
 <img alt="Modded Minecraft Knowledge Book" title="Modded Minecraft Knowledge Book Image"
     src="https://raw.githubusercontent.com/FooterManDev/Modded-Minecraft-Knowledge-Book/refs/heads/master/Writerside/images/mc_mod.svg"
     width="100" height="100" align="center"
 />
 </div>
+</a>
 
 # Modded Minecraft Knowledge Book
 Includes general knowledge topics related to Modded Minecraft, such as explaining Concepts, Troubleshooting, Performance, Controversies and more.
