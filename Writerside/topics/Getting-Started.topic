@@ -275,13 +275,13 @@
                             When allocating RAM,
                             you must ensure
                             you leave enough for the Operating System and other applications to use.<br/>
-                            If you allocate the maximum RAM you have in your computer, your computer will crash.
+                            Otherwise, your computer will crash.
                         </note>
                         <note>
                             If you allocate too much RAM,
                             you could cause performance issues in Java, and thus Minecraft.
                             This is because of the <a href="https://medium.com/@AlexanderObregon/understanding-javas-garbage-collection-bc141a2ef31f">Java Garbage Collector</a>,
-                            as if it has to handle so much unused memory,
+                            if it has to handle so much unused memory,
                             it will slow down tremendously.<br/>
                             It is recommended to not allocate more than 12 GB.
                         </note>
