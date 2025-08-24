@@ -34,6 +34,9 @@ Available topics:
 
 ---
 
+MMKB has a Discord Bot that can be used to create website links without having to visit, along with an issue report command. Add it using this link: https://discord.com/oauth2/authorize?client_id=1385063798804578354
+
+---
 This site is built using [Writerside](https://www.jetbrains.com/writerside/), deployed to [Cloudflare Pages](https://mmkb.pages.dev) and [GitHub Pages](https://footermandev.github.io/Modded-Minecraft-Knowledge-Book).<br/>
 Theme source: [devOS-Sanity-Edition/Cuprite](https://github.com/devOS-Sanity-Edition/Cuprite). Absolutely beautiful!<p/>
 Copyright © Modded Minecraft Knowledge Book © 2025 by FooterManDev and Contributors is licensed under CC BY-NC 4.0
