@@ -84,6 +84,17 @@ jobs:
           mkdir -p "$DEST"
           unzip "$ZIP_FILE" -d "$DEST"
 
+      - name: Copy Google verification to root
+        run: |
+         VERIF_FILE=".github/google5c656ab590a2ed69.html"
+          DEST="${{ needs.build.outputs.build_dir }}"
+          if [ -f "$VERIF_FILE" ]; then
+            cp "$VERIF_FILE" "$DEST/"
+            echo "Copied $VERIF_FILE -> $DEST/"
+          else
+            echo "Warning: $VERIF_FILE not found in repo. Skipping copy."
+          fi
+
       - name: Deploy to CF
         uses: cloudflare/wrangler-action@v3
         with:
