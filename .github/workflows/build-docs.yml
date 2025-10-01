@@ -84,22 +84,31 @@ jobs:
           mkdir -p "$DEST"
           unzip "$ZIP_FILE" -d "$DEST"
           
-      - name: Copy verification files into build root
+      - name: Place verification files
         run: |
+          GOOGLE_SRC=$(find .github -maxdepth 1 -type f -name 'google*.html' | head -n1)
+          DISCORD_SRC=".github/discord"
           DEST="${{ needs.build.outputs.build_dir }}"
-          echo "Copying verification files to $DEST"
-          # GitHub-stored verification files:
-          cp_if_exists() {
-            SRC="$1"
-            if [ -f "$SRC" ]; then
-              cp "$SRC" "$DEST/"
-              echo "Copied $SRC -> $DEST/"
-            else
-              echo "Warning: $SRC not found in repo. Skipping."
-            fi
-          }
-          cp_if_exists ".github/google5c656ab590a2ed69.html"
-          cp_if_exists ".github/discord"
+
+          echo "Deploy build dir: $DEST"
+          if [ -z "$GOOGLE_SRC" ]; then
+            echo "Error: no google*.html found under .github"
+            exit 1
+          fi
+
+          # Ensure destination exists and copy Google file to site root
+          mkdir -p "$DEST"
+          cp "$GOOGLE_SRC" "$DEST/$(basename "$GOOGLE_SRC")"
+          echo "Copied $GOOGLE_SRC -> $DEST/$(basename "$GOOGLE_SRC")"
+
+          # Ensure .well-known exists and copy Discord token there
+          if [ ! -f "$DISCORD_SRC" ]; then
+            echo "Error: $DISCORD_SRC not found in repo"
+            exit 1
+          fi
+          mkdir -p "$DEST/.well-known"
+          cp "$DISCORD_SRC" "$DEST/.well-known/discord"
+          echo "Copied $DISCORD_SRC -> $DEST/.well-known/discord"
 
       - name: Deploy to CF
         uses: cloudflare/wrangler-action@v3
