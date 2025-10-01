@@ -12,7 +12,7 @@
         <header-logo>mc_mod.svg</header-logo>
         <custom-css>main.css</custom-css>
         <algolia-id>QLN54MGB55</algolia-id>
-        <algolia-index>index</algolia-index>
+        <algolia-index>Index</algolia-index>
         <algolia-api-key>7cb465f82e2df29c8db89ac039c3c436</algolia-api-key>
         <algolia-show-logo>true</algolia-show-logo>
         <contribute-url>https://github.com/FooterManDev/Modded-Minecraft-Knowledge-Book/tree/master/Writerside</contribute-url>
@@ -29,8 +29,9 @@
 
     <footer>
         <copyright>Modded Minecraft Knowledge Book © 2025 by FooterManDev and Contributors is licensed under CC BY-NC 4.0</copyright>
+        <social type="email" href="This is broken due to a Writerside bug."/>
         <social type="github" href="https://github.com/FooterManDev/Modded-Minecraft-Knowledge-Book"/>
         <social type="discord" href="https://discord.gg/26Xd7cE7Ww"/>
-        <social type="bluesky" href="https://bsky.app/profile/blakebird.bsky.social"/>
+        <social type="bluesky" href="https://bsky.app/profile/footerman.bsky.social"/>
     </footer>
 </buildprofiles>
