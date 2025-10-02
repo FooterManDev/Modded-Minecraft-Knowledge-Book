@@ -189,7 +189,7 @@ jobs:
         run: |
           set -euo pipefail
           cd algolia
-          SITE_PRODUCT="${SITE_PRODUCT:-1}"
+          PRODUCT="${PRODUCT:-1}"
           echo "Setting product=\"$PRODUCT\" for Algolia JSON files (only when missing/empty)."
           
           for f in *.json; do
