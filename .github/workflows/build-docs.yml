@@ -230,8 +230,30 @@ jobs:
 
       - name: Publish Algolia Indexes
         run: |
+          set -euo pipefail
           cd algolia
+
+          echo "Listing files in $(pwd):"
+          ls -la
+
+          echo ""
+          echo "Showing contents of up to 5 JSON files:"
+          count=0
+          for jf in $(ls *.json 2>/dev/null | sort); do
+            if [ $count -ge 5 ]; then
+              break
+            fi
+            echo ""
+            echo "----- File: $jf -----"
+            cat "$jf"
+            echo "----- End file: $jf -----"
+            count=$((count + 1))
+          done
+          echo ""
+          echo "Files displayed: $count"
+          
           for file in *.json; do
+            [ -e "$file" ] || continue
             echo "Importing $file into $ALGOLIA_INDEX_NAME"
             algolia objects import "$ALGOLIA_INDEX_NAME" -F "$file"
           done
