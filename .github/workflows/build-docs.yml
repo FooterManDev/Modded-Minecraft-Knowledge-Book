@@ -190,18 +190,18 @@ jobs:
           set -euo pipefail
           cd algolia
           SITE_PRODUCT="${SITE_PRODUCT:-1}"
-          echo "Setting product=\"$SITE_PRODUCT\" for Algolia JSON files (only when missing/empty)."
+          echo "Setting product=\"$PRODUCT\" for Algolia JSON files (only when missing/empty)."
           
           for f in *.json; do
           echo "Processing $f ..."
           if jq -e 'type == "array"' "$f" >/dev/null 2>&1; then
-           jq --arg p "$SITE_PRODUCT" 'map(if (.product == null or .product == "") then . + {product:$p} else . end)' "$f" > "$f.tmp"
+           jq --arg p "$PRODUCT" 'map(if (.product == null or .product == "") then . + {product:$p} else . end)' "$f" > "$f.tmp"
            mv "$f.tmp" "$f"
           elif jq -e 'has("records") and (.records | type == "array")' "$f" >/dev/null 2>&1; then
-           jq --arg p "$SITE_PRODUCT" '.records = (.records | map(if (.product == null or .product == "") then . + {product:$p} else . end))' "$f" > "$f.tmp"
+           jq --arg p "$PRODUCT" '.records = (.records | map(if (.product == null or .product == "") then . + {product:$p} else . end))' "$f" > "$f.tmp"
            mv "$f.tmp" "$f"
           elif jq -e 'type == "object"' "$f" >/dev/null 2>&1; then
-           jq --arg p "$SITE_PRODUCT" 'if (.product == null or .product == "") then . + {product:$p} else . end' "$f" > "$f.tmp"
+           jq --arg p "$PRODUCT" 'if (.product == null or .product == "") then . + {product:$p} else . end' "$f" > "$f.tmp"
            mv "$f.tmp" "$f"
           else
            echo "Unknown top-level JSON type for $f — attempting NDJSON-per-line patch."
@@ -213,7 +213,7 @@ jobs:
                continue
              fi
              if echo "$trimmed" | jq -e '.' >/dev/null 2>&1; then
-               echo "$trimmed" | jq -c --arg p "$SITE_PRODUCT" 'if (.product == null or .product == "") then . + {product:$p} else . end' >> "$tmp"
+               echo "$trimmed" | jq -c --arg p "$PRODUCT" 'if (.product == null or .product == "") then . + {product:$p} else . end' >> "$tmp"
              else
                echo "$line" >> "$tmp"
              fi
