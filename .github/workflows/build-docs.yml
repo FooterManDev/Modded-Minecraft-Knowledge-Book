@@ -7,7 +7,7 @@ on:
 
 env:
   INSTANCE: 'Writerside/1'
-  DOCKER_VERSION: '243.22562'
+  DOCKER_VERSION: '28.4.0'
   CF_ACC_ID: ${{ secrets.CF_ACC_ID }}
   CF_API_TOK: ${{ secrets.CF_API_TOK }}
 
