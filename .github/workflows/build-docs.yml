@@ -20,7 +20,7 @@ jobs:
       algolia_zip: ${{ steps.discover.outputs.algolia_zip }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Writerside Build
         uses: JetBrains/writerside-github-action@v4
@@ -62,10 +62,10 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Download Build
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: zip
           path: .
@@ -128,10 +128,10 @@ jobs:
       name: github-pages
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Download Build
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: zip
           path: ./site
@@ -145,7 +145,7 @@ jobs:
           unzip "./site/$ZIP_FILE" -d "$DEST_DIR"
 
       - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           name: github-pages
           path: ./site/${{ needs.build.outputs.build_dir }}
@@ -163,10 +163,10 @@ jobs:
       ALGOLIA_ADMIN_API_KEY: ${{ secrets.ALG_ADM_API_KEY }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Download Algolia Indexes
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: algolia-zip
           path: ./algolia
