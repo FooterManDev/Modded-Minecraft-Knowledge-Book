@@ -191,35 +191,83 @@ jobs:
           cd algolia
           PRODUCT="${PRODUCT:-1}"
           echo "Setting product=\"$PRODUCT\" for Algolia JSON files (only when missing/empty)."
-          
+
+          echo "Found JSON files:"
+          ls -la *.json || true
+
           for f in *.json; do
-          echo "Processing $f ..."
-          if jq -e 'type == "array"' "$f" >/dev/null 2>&1; then
-           jq --arg p "$PRODUCT" 'map(if (.product == null or .product == "") then . + {product:$p} else . end)' "$f" > "$f.tmp"
-           mv "$f.tmp" "$f"
-          elif jq -e 'has("records") and (.records | type == "array")' "$f" >/dev/null 2>&1; then
-           jq --arg p "$PRODUCT" '.records = (.records | map(if (.product == null or .product == "") then . + {product:$p} else . end))' "$f" > "$f.tmp"
-           mv "$f.tmp" "$f"
-          elif jq -e 'type == "object"' "$f" >/dev/null 2>&1; then
-           jq --arg p "$PRODUCT" 'if (.product == null or .product == "") then . + {product:$p} else . end' "$f" > "$f.tmp"
-           mv "$f.tmp" "$f"
-          else
-           echo "Unknown top-level JSON type for $f — attempting NDJSON-per-line patch."
-           tmp="$(mktemp)"
-           while IFS= read -r line || [ -n "$line" ]; do
-             trimmed="$(echo "$line" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
-             if [ -z "$trimmed" ]; then
-               echo "" >> "$tmp"
-               continue
-             fi
-             if echo "$trimmed" | jq -e '.' >/dev/null 2>&1; then
-               echo "$trimmed" | jq -c --arg p "$PRODUCT" 'if (.product == null or .product == "") then . + {product:$p} else . end' >> "$tmp"
-             else
-               echo "$line" >> "$tmp"
-             fi
-           done < "$f"
-           mv "$tmp" "$f"
-          fi
+            echo
+            echo "---- Processing $f ----"
+            if [ ! -s "$f" ]; then
+              echo "Skipping empty file: $f (size 0)"
+              continue
+            fi
+
+            echo "Size: $(wc -c < "$f") bytes"
+            echo "Head (first 2 lines / 200 bytes):"
+            head -c 200 "$f" || true
+            echo
+            echo "-----"
+
+            if jq -e '.' "$f" >/dev/null 2>&1; then
+              echo "$f is valid JSON — attempting structural update with jq..."
+
+              jq --arg p "$PRODUCT" '
+                if type == "array" then
+                  map(if (.product == null or .product == "") then . + {product:$p} else . end)
+                elif (type == "object" and has("records") and (.records|type == "array")) then
+                  .records = (.records | map(if (.product == null or .product == "") then . + {product:$p} else . end))
+                elif type == "object" then
+                  if (.product == null or .product == "") then . + {product:$p} else . end
+                else
+                  .
+                end
+              ' "$f" > "$f.tmp"
+
+              if [ ! -s "$f.tmp" ]; then
+                echo "Warning: jq produced empty output for $f — falling back to NDJSON per-line update."
+                rm -f "$f.tmp"
+              else
+                mv "$f.tmp" "$f"
+                echo "Patched $f (whole-file JSON path)."
+                continue
+              fi
+            else
+              echo "$f is not parseable as a single JSON value — attempting NDJSON per-line update."
+            fi
+
+            tmp="$(mktemp)"
+            while IFS= read -r line || [ -n "$line" ]; do
+              trimmed="$(printf '%s' "$line" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
+              if [ -z "$trimmed" ]; then
+                printf '\n' >> "$tmp"
+                continue
+              fi
+
+              if printf '%s' "$trimmed" | jq -e '.' >/dev/null 2>&1; then
+                printf '%s\n' "$trimmed" | jq -c --arg p "$PRODUCT" 'if (.product == null or .product == "") then . + {product:$p} else . end' >> "$tmp"
+              else
+                printf '%s\n' "$line" >> "$tmp"
+              fi
+            done < "$f"
+
+            if [ -s "$tmp" ]; then
+              mv "$tmp" "$f"
+              echo "Patched $f (NDJSON path)."
+            else
+              rm -f "$tmp"
+              echo "Error: NDJSON fallback produced empty file for $f — leaving original intact and aborting."
+              exit 1
+            fi
+          done
+
+          echo
+          echo "Final files summary:"
+          for f in *.json; do
+            echo "-> $f : $(wc -c < "$f") bytes"
+            echo "  head:"
+            head -c 200 "$f" || true
+            echo
           done
 
       - name: Setup Algolia CLI
