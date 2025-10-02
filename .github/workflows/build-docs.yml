@@ -53,6 +53,7 @@ jobs:
           path: ${{ steps.discover.outputs.zip_path }}
 
       - name: Upload Algolia
+        if: steps.discover.outputs.algolia_zip != ''
         uses: actions/upload-artifact@v4
         with:
           name: algolia-zip
@@ -157,10 +158,12 @@ jobs:
 
   deploy-algolia:
     needs: build
+    if: needs.build.outputs.algolia_zip != ''
     runs-on: ubuntu-latest
     env:
       ALGOLIA_APPLICATION_ID: ${{ secrets.ALG_APP_ID }}
       ALGOLIA_ADMIN_API_KEY: ${{ secrets.ALG_ADM_API_KEY }}
+      ALGOLIA_INDEX_NAME: ${{ secrets.ALG_INDEX_NAME }}
 
     steps:
       - uses: actions/checkout@v5
@@ -185,5 +188,5 @@ jobs:
           cd algolia
           for file in *.json; do
             echo "Importing $file into $ALGOLIA_INDEX_NAME"
-            algolia objects import Index -F "$file"
+            algolia objects import -i "$ALGOLIA_INDEX_NAME" -F "$file"
           done
