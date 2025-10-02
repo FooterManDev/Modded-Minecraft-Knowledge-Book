@@ -13,6 +13,7 @@ env:
 
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
     outputs:
       zip_path: ${{ steps.discover.outputs.zip_path }}
@@ -60,6 +61,7 @@ jobs:
           path: ${{ steps.discover.outputs.algolia_zip }}
 
   deploy-cf:
+    name: Deploy for CloudFlare Pages
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -120,6 +122,7 @@ jobs:
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 
   deploy-gh:
+    name: Deploy to GitHub Pages
     needs: build
     runs-on: ubuntu-latest
     permissions:
@@ -157,6 +160,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
   deploy-algolia:
+    name: Deploy Records to Algolia
     needs: build
     if: needs.build.outputs.algolia_zip != ''
     runs-on: ubuntu-latest
@@ -164,6 +168,7 @@ jobs:
       ALGOLIA_APPLICATION_ID: ${{ secrets.ALG_APP_ID }}
       ALGOLIA_ADMIN_API_KEY: ${{ secrets.ALG_ADM_API_KEY }}
       ALGOLIA_INDEX_NAME: ${{ secrets.ALG_INDEX_NAME }}
+      PRODUCT: '1'
 
     steps:
       - uses: actions/checkout@v5
@@ -179,6 +184,43 @@ jobs:
           ZIP_NAME="$(basename '${{ needs.build.outputs.algolia_zip }}')"
           echo "Unzipping ./algolia/$ZIP_NAME into ./algolia"
           unzip "./algolia/$ZIP_NAME" -d ./algolia
+
+      - name: Patch Algolia JSON files
+        run: |
+          set -euo pipefail
+          cd algolia
+          SITE_PRODUCT="${SITE_PRODUCT:-1}"
+          echo "Setting product=\"$SITE_PRODUCT\" for Algolia JSON files (only when missing/empty)."
+          
+          for f in *.json; do
+          echo "Processing $f ..."
+          if jq -e 'type == "array"' "$f" >/dev/null 2>&1; then
+           jq --arg p "$SITE_PRODUCT" 'map(if (.product == null or .product == "") then . + {product:$p} else . end)' "$f" > "$f.tmp"
+           mv "$f.tmp" "$f"
+          elif jq -e 'has("records") and (.records | type == "array")' "$f" >/dev/null 2>&1; then
+           jq --arg p "$SITE_PRODUCT" '.records = (.records | map(if (.product == null or .product == "") then . + {product:$p} else . end))' "$f" > "$f.tmp"
+           mv "$f.tmp" "$f"
+          elif jq -e 'type == "object"' "$f" >/dev/null 2>&1; then
+           jq --arg p "$SITE_PRODUCT" 'if (.product == null or .product == "") then . + {product:$p} else . end' "$f" > "$f.tmp"
+           mv "$f.tmp" "$f"
+          else
+           echo "Unknown top-level JSON type for $f — attempting NDJSON-per-line patch."
+           tmp="$(mktemp)"
+           while IFS= read -r line || [ -n "$line" ]; do
+             trimmed="$(echo "$line" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
+             if [ -z "$trimmed" ]; then
+               echo "" >> "$tmp"
+               continue
+             fi
+             if echo "$trimmed" | jq -e '.' >/dev/null 2>&1; then
+               echo "$trimmed" | jq -c --arg p "$SITE_PRODUCT" 'if (.product == null or .product == "") then . + {product:$p} else . end' >> "$tmp"
+             else
+               echo "$line" >> "$tmp"
+             fi
+           done < "$f"
+           mv "$tmp" "$f"
+          fi
+          done
 
       - name: Setup Algolia CLI
         uses: algolia/setup-algolia-cli@master
