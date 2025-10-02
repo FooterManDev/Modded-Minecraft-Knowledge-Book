@@ -227,6 +227,9 @@ jobs:
 
       - name: Setup Algolia CLI
         uses: algolia/setup-algolia-cli@master
+        with:
+          version:
+            1.7.0
 
       - name: Publish Algolia Indexes
         run: |
