@@ -188,5 +188,5 @@ jobs:
           cd algolia
           for file in *.json; do
             echo "Importing $file into $ALGOLIA_INDEX_NAME"
-            algolia objects import -i "$ALGOLIA_INDEX_NAME" -F "$file"
+            algolia objects import "$ALGOLIA_INDEX_NAME" -F "$file"
           done
